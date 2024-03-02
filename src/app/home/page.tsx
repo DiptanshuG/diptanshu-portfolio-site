@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import ScrollIcon from "@/components/scrollIcon/ScrollIcon";
+import Canvas from "@/components/canvas";
 
 const Home = () => {
   const scrollToBottom = () => {
@@ -40,6 +41,8 @@ const Home = () => {
               <ScrollIcon />
             </div>
           </div>
+          <Canvas />
+
         </div>
       </div>
     </div>

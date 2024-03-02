@@ -4,8 +4,8 @@ const Footer = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current!;
-    const ctx = canvas.getContext("2d")!;
+    const canvas = canvasRef?.current!;
+    const ctx = canvas?.getContext("2d")!;
 
     // Ensure canvas and context exist
     if (!canvas || !ctx) return;
@@ -66,7 +66,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-black text-white py-4 relative">
-      <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full" />
+      {/* <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full" /> */}
       <p className="text-center" id="trademark">
         ©2024 Diptanshu bhawsar 
       </p>
