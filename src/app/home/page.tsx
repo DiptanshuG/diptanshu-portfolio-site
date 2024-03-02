@@ -5,10 +5,14 @@ import ScrollIcon from "@/components/scrollIcon/ScrollIcon";
 import Canvas from "@/components/canvas";
 
 const Home = () => {
-
   return (
-    <div>
-      <div className="h-screen pt-20 ">
+    <div className="relative">
+      {/* Set canvas as background */}
+      <div className="absolute inset-0 z-0">
+        <Canvas />
+      </div>
+
+      <div className="h-screen pt-20 relative z-10">
         <div className="pt-20 md:px-8 flex flex-col justify-between h-[80%]">
           <div className="m-8">
             <div className="flex justify-start flex-col items-start text-xl font-normal md:text-3xl pl-8">
@@ -29,14 +33,10 @@ const Home = () => {
             <span className="font-normal text-xl md:text-2xl mx-3">
               Diptanshu Bhawsar
             </span>
-            <div
-              className="flex justify-center items-center mt-8 md:mt-0"
-            >
+            <div className="flex justify-center items-center mt-8 md:mt-0">
               <ScrollIcon />
             </div>
           </div>
-          <Canvas />
-
         </div>
       </div>
     </div>
