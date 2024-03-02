@@ -6,22 +6,28 @@ const About: React.FC = () => {
   return (
     <div className="bg-[rgb(9,4,22)] text-white py-16">
       <div className="mt-[160px] flex flex-col gap-3 ">
-        <h2 className="text-[4rem] font-[600] mb-8 text-center">About Me</h2>
-        <div className="aboutContainer p-8 flex flex-col lg:flex-row items-center justify-center w-full">
+        <h2 className="text-4xl my-6 mb-8 font-bold mb-8 text-white text-center font-extrabold">
+          About Me
+        </h2>
+        <div className="flex flex-col lg:flex-row items-center justify-center w-full px-9">
           <div
             className="m-4"
-            style={{ maxWidth: "500px", maxHeight: "600px" }}
+            style={{
+              maxWidth: "500px",
+              maxHeight: "600px",
+              marginLeft: "100px",
+            }}
           >
             <Image
               src={profile}
               alt="Picture of dipanshu bhawsar"
-              width={400}
+              width={600}
               height={520}
               className="w-full rounded-xl"
             />
           </div>
           <div
-            className="infoContainer fadeInScroll delay fadeInScrollActive lg:pl-8 flex-grow"
+            className="infoContainer fadeInScroll delay fadeInScrollActive lg:pl-8 flex-grow mr-9"
             data-delay="0.25"
             style={{ animationDelay: "0.25s" }}
           >

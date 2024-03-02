@@ -105,7 +105,7 @@ const Projects: React.FC = () => {
 
   return (
     <div className="showcase h-fit w-screen  flex justify-center items-center bg-[rgb(9,4,22)]">
-      <div className=" mx-auto px-4  h-full p-8">
+      <div className="mx-auto px-4  h-full p-8">
         <h2 className="text-4xl my-6 font-bold mb-8 text-white text-center font-extrabold">
           Selected Projects
         </h2>

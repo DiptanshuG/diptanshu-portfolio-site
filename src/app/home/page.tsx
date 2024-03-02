@@ -1,24 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import Header from "@/components/Header";
 import ScrollIcon from "@/components/scrollIcon/ScrollIcon";
-import Projects from "@/components/home/projects/Projects";
-import About from "@/components/home/about/About";
 
 const Home = () => {
-  const [theme, setTheme] = useState("light");
-
-  const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
-
   return (
-    <div className="h-screen overflow-auto">
-      {/* Header with transparent, blurred background */}
-      <Header theme={theme} toggleTheme={toggleTheme} />
-
-      <div className="h-screen">
+    <div>
+      <div className="h-screen pt-20 ">
         <div className="pt-20 px-8 flex flex-col justify-between h-[80%]">
           <div className="m-8">
             <div className="flex justify-start flex-col items-start font-normal text-3xl pl-8">
@@ -42,14 +30,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div>
-        <Projects />
-      </div>
-
-      <div>
-        <About/>
       </div>
     </div>
   );
