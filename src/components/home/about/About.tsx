@@ -51,7 +51,7 @@ const About: React.FC = () => {
               </div>
             </p>
             <button
-              className="delay bg-[#6D37FF] md:w-full font-bold text-white py-2 md:mx-8 px-4 rounded-lg mt-4 hover:bg-blue-600 transition-colors duration-300"
+              className="delay bg-[#6D37FF] md:w-fit w-full font-bold text-white py-2 md:mr-8 px-4 rounded-lg mt-4 hover:bg-blue-600 transition-colors duration-300"
               data-delay="0.5"
               style={{ animationDelay: "0.5s" }}
             >

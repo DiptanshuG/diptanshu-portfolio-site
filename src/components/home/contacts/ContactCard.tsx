@@ -19,7 +19,7 @@ const socialMediaLinks = [
 
 const ContactCard: React.FC = () => {
   return (
-    <div className="h-[370px] w-fit bg-[#242424] border border-transparent rounded-lg transition-all duration-1000 ease-in-out">
+    <div className="h-[370px] w-fit bg-[#242424] border border-transparent rounded-lg transition-all duration-1000 ease-in-out p-4">
       <div>
         <h2 className="text-4xl my-6 font-bold mb-8 text-white text-center font-extrabold">
           Contact Me
