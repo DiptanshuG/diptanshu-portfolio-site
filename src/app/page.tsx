@@ -1,10 +1,13 @@
-import React from 'react'
-import Home from './home/page'
+import React from "react";
+import Home from "./home/page";
+import Projects from "@/components/home/projects/projects";
 
 const Main = () => {
   return (
-    <div><Home/></div>
-  )
-}
+    <div>
+      <Home />
+    </div>
+  );
+};
 
-export default Main
+export default Main;

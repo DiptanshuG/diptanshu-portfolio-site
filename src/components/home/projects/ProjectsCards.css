@@ -1,0 +1,50 @@
+.project-card {
+    position: relative;
+    width: 350px;
+    height: 580px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+/* ProjectsCards.css */
+.project-info {
+  background-color: rgba(255, 255, 255, 0.2); /* Set background color with some transparency */
+  backdrop-filter: blur(10px); /* Apply a blur effect to the background */  
+  padding: 1rem; /* Add padding to the project info */
+  border-radius: 0 0 10px 10px; /* Add border radius to the bottom corners */
+  position: absolute; /* Position the project info absolutely */
+  bottom: 0; /* Align the project info to the bottom */
+  left: 0; /* Align the project info to the left */
+  right: 0; /* Align the project info to the right */
+  z-index: 1; /* Ensure the project info is above the project image */
+}
+
+.project-title {
+  margin-bottom: 0.5rem; /* Add margin below the project title */
+  font-size: 1.25rem; /* Increase font size of the project title */
+  font-weight: bold; /* Make the project title bold */
+  color: #333; /* Set color of the project title */
+}
+
+.project-description {
+  margin-top: 0.5rem; /* Add margin above the project description */
+  font-size: 0.875rem; /* Set font size of the project description */
+  color: #666; /* Set color of the project description */
+}
+
+  
+  .project-info:hover {
+    opacity: 1;
+  }
+  
+  .project-card:hover .project-image {
+    transform: scale(1.1);
+  }
+  

@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,10 +26,45 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: "Poppins", sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Body styling*/
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+}
+
+/*Container styling*/
+.landing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50vh;
+  box-shadow: 0 32px 32px -8px rgba(0, 0, 0, 0.5);
+}
+
+/* Distortion Styles*/
+.distortion {
+  position: fixed;
+  width: 50vw;
+  height: 60vh;
 }
