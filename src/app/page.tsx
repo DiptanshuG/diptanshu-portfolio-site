@@ -8,6 +8,7 @@ import Skills from "@/components/home/skills/Skills";
 import Header from "@/components/Header";
 import Contact from "@/components/home/contacts/Contact";
 import Footer from "@/components/Footer/Footer";
+import Canvas from "@/components/canvas";
 
 const Main = () => {
   const [theme, setTheme] = useState("light");
@@ -16,17 +17,20 @@ const Main = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
   return (
-    <div className="h-screen overflow-x-hidden">
+    <div className="h-screen overflow-x-hidden bg-black">
       <Header theme={theme} toggleTheme={toggleTheme} />
-        <Home />
-        <Projects />
-      
-        <About />
-   
-        <Skills />
-        <Contact/>
+      <Home />
+      <Projects />
 
-        <Footer/>
+      <About />
+
+      <Skills />
+
+      <div style={{ position: "relative" }}>
+        <Contact />
+      </div>
+
+      <Footer />
     </div>
   );
 };
