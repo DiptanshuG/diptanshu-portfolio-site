@@ -56,7 +56,7 @@ const Skills: React.FC = () => {
       <div className="flex flex-wrap justify-center p-8 ">
         {/* Map over technologies array */}
         {technologies.map((tech, index) => (
-          <div key={index} className="skill mr-6 mb-6 delay-100 mx-4 px-4">
+          <div key={index} className="skill mr-6 mb-6 delay-100 mx-4 md:px-4">
             <div className="tech-icon p-8">
               <Image
                 src={tech.icon}

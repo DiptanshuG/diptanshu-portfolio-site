@@ -11,11 +11,10 @@ const About: React.FC = () => {
         </h2>
         <div className="flex flex-col lg:flex-row items-center justify-center w-full px-9">
           <div
-            className="m-4"
+            className="m-4 md:ml-9 "
             style={{
               maxWidth: "500px",
               maxHeight: "600px",
-              marginLeft: "100px",
             }}
           >
             <Image
@@ -27,7 +26,7 @@ const About: React.FC = () => {
             />
           </div>
           <div
-            className="infoContainer fadeInScroll delay fadeInScrollActive lg:pl-8 flex-grow mr-9"
+            className="infoContainer fadeInScroll delay fadeInScrollActive lg:pl-8 flex-grow md:mt-0 mt-4 md:mr-9"
             data-delay="0.25"
             style={{ animationDelay: "0.25s" }}
           >
@@ -52,7 +51,7 @@ const About: React.FC = () => {
               </div>
             </p>
             <button
-              className="delay bg-[#6D37FF] font-bold text-white py-2 mx-8 px-4 rounded-lg mt-4 hover:bg-blue-600 transition-colors duration-300"
+              className="delay bg-[#6D37FF] md:w-full font-bold text-white py-2 md:mx-8 px-4 rounded-lg mt-4 hover:bg-blue-600 transition-colors duration-300"
               data-delay="0.5"
               style={{ animationDelay: "0.5s" }}
             >

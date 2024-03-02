@@ -6,6 +6,8 @@ import Projects from "@/components/home/projects/Projects";
 import About from "@/components/home/about/About";
 import Skills from "@/components/home/skills/Skills";
 import Header from "@/components/Header";
+import Contact from "@/components/home/contacts/Contact";
+import Footer from "@/components/Footer/Footer";
 
 const Main = () => {
   const [theme, setTheme] = useState("light");
@@ -22,6 +24,9 @@ const Main = () => {
         <About />
    
         <Skills />
+        <Contact/>
+
+        <Footer/>
     </div>
   );
 };
