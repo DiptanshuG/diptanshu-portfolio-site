@@ -5,12 +5,7 @@ import ScrollIcon from "@/components/scrollIcon/ScrollIcon";
 import Canvas from "@/components/canvas";
 
 const Home = () => {
-  const scrollToBottom = () => {
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
-      behavior: "smooth",
-    });
-  };
+
   return (
     <div>
       <div className="h-screen pt-20 ">
@@ -35,7 +30,6 @@ const Home = () => {
               Diptanshu Bhawsar
             </span>
             <div
-              onClick={scrollToBottom}
               className="flex justify-center items-center mt-8 md:mt-0"
             >
               <ScrollIcon />
