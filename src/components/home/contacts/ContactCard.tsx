@@ -25,7 +25,7 @@ const ContactCard: React.FC = () => {
           Contact Me
         </h2>
         <div className="flex flex-col items-center justify-center p-4">
-          <a className="contactInfo" href="mailto:atakanyigit85@gmail.com">
+          <a className="contactInfo" href="mailto:diptanshubhawsar50@gmail.com">
             <AiOutlineMail className="inline-block mr-2" />
             diptanshubhawsar50@gmail.com
           </a>
