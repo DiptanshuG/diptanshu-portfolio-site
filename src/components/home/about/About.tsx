@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "~/images/profile-pic.png";
+import profile from "~/images/my.jpeg";
 import Image from "next/image";
 
 const About: React.FC = () => {
