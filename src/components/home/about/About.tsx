@@ -34,7 +34,7 @@ const About: React.FC = () => {
               <div>Hi There!,</div>
               <br />
               <div>
-                I&apos;m Yigit. I am a{" "}
+                I&apos;m Diptanshu. I am a{" "}
                 <b className="text-[#6D37FF]">front-end web developer</b> and{" "}
                 <b className="text-[#6D37FF]">designer</b> with a passion for
                 creating unique and beautiful websites. I have experience with a
