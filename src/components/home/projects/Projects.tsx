@@ -12,6 +12,7 @@ import pos from "~/images/pos.png";
 import rentyourdress from "~/images/rentyourdress.png";
 import todo from "~/images/todo.png";
 import uniqart from "~/images/uniqart.png";
+import blockseblock from "~/images/blockseblock.png";
 
 const Projects: React.FC = () => {
   const projectsData = [
@@ -100,6 +101,13 @@ const Projects: React.FC = () => {
       link: "https://demo.uniqart.io/",
 
       description: "Description for Project 12",
+    },
+    {
+      image: blockseblock,
+      title: "BlockseBlock - Empowering Student Projects and Hackathons",
+      technologies: " ReactJS, TailwindCSS, MongoDB",
+      link: "https://blockseblock.com/",
+      description: "Revolutionizing student collaboration and hackathon management with intuitive design and powerful functionality."
     },
   ];
 

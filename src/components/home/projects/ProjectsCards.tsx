@@ -35,8 +35,21 @@ const ProjectsCards: React.FC<ProjectsCardsProps> = ({
         />
       </div>
       <div className="project-info">
-        <h3 className="project-title">{project.title}</h3>
-        <p className="project-description text-sm break-all">
+        <h3
+          className={` ${
+            project.title ===
+            "BlockseBlock - Empowering Student Projects and Hackathons"
+              ? "project-title-white"
+              : "project-title"
+          }`}
+        >
+          {project.title}
+        </h3>
+        <p
+          className={`project-description text-sm break-all ${
+            project.title === "BlockseBlock" ? "text-white" : ""
+          }`}
+        >
           {project.technologies}
         </p>
       </div>
