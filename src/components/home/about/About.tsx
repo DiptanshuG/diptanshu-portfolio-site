@@ -1,6 +1,7 @@
 import React from "react";
 import profile from "~/images/my.jpeg";
 import Image from "next/image";
+import PaymentComponent from "@/components/PaymentComponent.js"
 
 const About: React.FC = () => {
   return (
@@ -57,6 +58,7 @@ const About: React.FC = () => {
             >
               Contact Now
             </button>
+            <PaymentComponent />
           </div>
         </div>
       </div>
