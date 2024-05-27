@@ -1,4 +1,6 @@
-import { FC } from 'react'
+"use client"
+
+import { FC, useCallback } from 'react'
 
 import { useCanvasContext } from '@/app/hook/useCanvas'
 import useResponsiveSize from '@/app/hook/useResponsiveSize'
@@ -19,7 +21,7 @@ const Wave: FC = () => {
     backWave: new WaveEntity([0.0122, 0.018, 0.005], 'rgba(255,179,0,0.48)'),
   }
 
-  const render = () => {
+  const render = useCallback(() => {
     context?.clearRect(0, 0, width, height)
     Object.entries(waves).forEach(([waveName, wave]) => {
       wave.waveColor = colors[waveName]
@@ -29,11 +31,15 @@ const Wave: FC = () => {
       colors = generateColor()
       timer = 1
     }
-    console.log({colors})
     timer++
     frequency += 0.013
-    requestAnimationFrame(render)
-  }
+    const frame=requestAnimationFrame(render)
+
+    return ()=>{
+      cancelAnimationFrame(frame)
+    }
+  }, [context,width,height,generateColor])
+
   if (context) render()
   return null
 }

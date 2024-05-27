@@ -1,3 +1,6 @@
+"use client"
+
+
 const useColor = () => {
   const randomInteger = () => Math.floor(Math.random() * 180)
 
@@ -9,9 +12,9 @@ const useColor = () => {
     const secondary = `rgba(${red}, ${green}, ${blue}, 0.48)`
     const bodyBackgroundColor = `rgba(${red}, ${green}, ${blue}, 0.28)`
     // TODO: remove it from color generator
-    if (typeof document !== 'undefined') {
-      document.body.style.backgroundColor = bodyBackgroundColor;
-    }  
+    // if (typeof document !== 'undefined') {
+    //   document.body.style.backgroundColor = bodyBackgroundColor;
+    // }  
       return {
       frontWave: primary,
       backWave: secondary,

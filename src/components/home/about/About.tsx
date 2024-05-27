@@ -30,7 +30,7 @@ const About: React.FC = () => {
             data-delay="0.25"
             style={{ animationDelay: "0.25s" }}
           >
-            <p className="font-normal text-2xl">
+            <div className="font-normal text-2xl">
               <div>Hi There!,</div>
               <br />
               <div>
@@ -49,7 +49,7 @@ const About: React.FC = () => {
                 by delivering visually stunning and intuitive websites that
                 effectively communicate their message.
               </div>
-            </p>
+            </div>
             <button
               className="delay bg-[#6D37FF] md:w-fit w-full font-bold text-white py-2 md:mr-8 px-4 rounded-lg mt-4 hover:bg-blue-600 transition-colors duration-300"
               data-delay="0.5"
