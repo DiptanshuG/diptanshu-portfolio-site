@@ -1,0 +1,17 @@
+{
+    "name": "personal info",
+    "short_name": "Diptanshu info",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "description": "displays my continuous efforts in technology development",
+    "icons": [
+      {
+        "src": "/icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+  }
+  
