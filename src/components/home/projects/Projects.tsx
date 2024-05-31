@@ -13,6 +13,8 @@ import rentyourdress from "~/images/rentyourdress.png";
 import todo from "~/images/todos.jpeg";
 import uniqart from "~/images/uniqart.png";
 import blockseblock from "~/images/blockseblock.png";
+import dao from "~/images/Dao.jpeg";
+import battleChan from "~/images/battlechan.jpeg";
 
 const Projects: React.FC = () => {
   const projectsData = [
@@ -110,6 +112,20 @@ const Projects: React.FC = () => {
       technologies: " ReactJS, TailwindCSS, MongoDB",
       link: "https://blockseblock.com/",
       description: "Revolutionizing student collaboration and hackathon management with intuitive design and powerful functionality."
+    },
+    {
+      image: dao,
+      title: "Daouhouse -  A blockchain-based platform",
+      technologies: "Rust , Tailwind, Difinity, React Js Plug wallet , Internet Identity",
+      link: "https://qcvph-nqaaa-aaaak-aksra-cai.icp0.io/",
+      description: "Daouhouse Project: A blockchain-based platform for creating DAO organizations, enabling proposal voting and organizational changes based on community votes."
+    },
+    {
+      image: battleChan,
+      title: "Battlechan -  A blockchain-based platform",
+      technologies: "Motoko , Tailwind, Difinity, React Js Plug wallet , Internet Identity",
+      link: "https://rinem-tyaaa-aaaak-qigua-cai.icp0.io/",
+      description: "Battlechan: A blockchain-based platform built with Motoko and React.js, where users can create and find posts, participate in battles by upvoting or downvoting, and showcase their skills."
     },
   ];
 
