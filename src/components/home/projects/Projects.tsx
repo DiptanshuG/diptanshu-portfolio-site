@@ -5,7 +5,7 @@ import admin from "~/images/adminheebee.jpeg";
 import dukkandar from "~/images/sellerdukandar2.jpeg";
 import heebeecustomer from "~/images/heebeecafe.png";
 import imperial from "~/images/imperialassetadmin.jpeg";
-import kitchenheebee from "~/images/heebeekitchen.png";
+import kitchenheebee from "~/images/kitchen.jpeg";
 import kitchenIqLanding from "~/images/kitcheniq.png";
 import portfolio from "~/images/portfolio.png";
 import pos from "~/images/pos.png";
