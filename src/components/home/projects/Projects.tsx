@@ -56,7 +56,9 @@ const Projects: React.FC = () => {
     {
       image: kitchenheebee,
       title: "Project 6",
+      technologies: "ReactJs, Redux , Bootstrap, NodeJs ,PostgreSQL ",
       description: "Description for Project 6",
+      link: "https://kitchen.heebee.in/",
     },
     {
       image: kitchenIqLanding,
