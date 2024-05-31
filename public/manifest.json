@@ -5,6 +5,8 @@
     "display": "standalone",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
+    "orientation": "portrait",
+    "scope": "/",
     "description": "displays my continuous efforts in technology development",
     "icons": [
       {
