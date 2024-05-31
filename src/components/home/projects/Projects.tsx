@@ -15,6 +15,7 @@ import uniqart from "~/images/uniqart.png";
 import blockseblock from "~/images/blockseblock.png";
 import dao from "~/images/Dao.jpeg";
 import battleChan from "~/images/battlechan.jpeg";
+import pevnost from "~/images/pevnostclient.jpeg";
 
 const Projects: React.FC = () => {
   const projectsData = [
@@ -51,7 +52,7 @@ const Projects: React.FC = () => {
       image: imperial,
       title:
         "Imperial Assets (building selling platforms based on blockchain bids type system)",
-      technologies: "Next JS, Tailwind D3",
+      technologies: "Next JS, Tailwind , D3",
       description: "Description for Project 5",
       link: "https://imperial-frontend.atican.dev/",
     },
@@ -127,6 +128,13 @@ const Projects: React.FC = () => {
       link: "https://rinem-tyaaa-aaaak-qigua-cai.icp0.io/",
       description: "Battlechan: A blockchain-based platform built with Motoko and React.js, where users can create and find posts, participate in battles by upvoting or downvoting, and showcase their skills."
     },
+    {
+      image: pevnost,
+      title: "Pevnost Corporation",
+      technologies: "React.js, Bootstrap",
+      link: "https://pevnost-coorporation.vercel.app/",
+      description: "Pevnost Corporation's website showcases their expertise in providing technical, accounting, and HR services. Built with React.js and Bootstrap, the site offers a sleek and professional platform for marketing their business."
+    }
   ];
 
   return (
