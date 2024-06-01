@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import profile from "~/images/my.jpeg";
 import Image from "next/image";
 import PaymentComponent from "./payment/PaymentComponent";
+import ContactFormModal from "@/components/ContactFormModal";
 
 const About: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleModalOpen = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="bg-[rgb(9,4,22)] text-white py-16">
       <div className="mt-[160px] flex flex-col gap-3 ">
@@ -52,6 +63,7 @@ const About: React.FC = () => {
               </div>
             </div>
             <button
+              onClick={handleModalOpen}
               className="delay bg-[#6D37FF] md:w-fit w-full font-bold text-white py-2 md:mr-8 px-4 rounded-lg mt-4 hover:bg-blue-600 transition-colors duration-300"
               data-delay="0.5"
               style={{ animationDelay: "0.5s" }}
@@ -62,6 +74,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
+      <ContactFormModal isOpen={isModalOpen} onClose={handleModalClose} />
     </div>
   );
 };

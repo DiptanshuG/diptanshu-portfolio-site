@@ -5,6 +5,12 @@
   overflow: hidden;
   margin-bottom: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .project-image {
@@ -13,44 +19,42 @@
   transition: transform 0.5s ease;
 }
 
-/* ProjectsCards.css */
 .project-info {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.2
-  ); /* Set background color with some transparency */
-  backdrop-filter: blur(10px); /* Apply a blur effect to the background */
-  padding: 1rem; /* Add padding to the project info */
-  border-radius: 0 0 10px 10px; /* Add border radius to the bottom corners */
-  position: absolute; /* Position the project info absolutely */
-  bottom: 0; /* Align the project info to the bottom */
-  left: 0; /* Align the project info to the left */
-  right: 0; /* Align the project info to the right */
-  z-index: 1; /* Ensure the project info is above the project image */
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
 }
 
 .project-title {
-  margin-bottom: 0.5rem; /* Add margin below the project title */
-  font-size: 1.25rem; /* Increase font size of the project title */
-  font-weight: bold; /* Make the project title bold */
-  color: #333; /* Set color of the project title */
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
 }
+
 .project-title-white {
-  margin-bottom: 0.5rem; /* Add margin below the project title */
-  font-size: 1.25rem; /* Increase font size of the project title */
-  font-weight: bold; /* Make the project title bold */
-  color: #fcfcfc; /* Set color of the project title */
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fcfcfc;
 }
 
 .project-description {
-  margin-top: 0.5rem; /* Add margin above the project description */
-  font-size: 0.875rem; /* Set font size of the project description */
-  color: #666; /* Set color of the project description */
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #666;
 }
 
-.project-info:hover {
+.project-card:hover .project-info {
+  bottom: 0;
   opacity: 1;
 }
 
