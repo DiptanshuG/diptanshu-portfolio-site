@@ -1,8 +1,9 @@
 // PaymentComponent.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Loader from '@/components/Loader/Loader';
 
 
 declare global {
@@ -12,6 +13,8 @@ declare global {
 }
 
 export default function PaymentComponent() {
+
+    const [loading, setLoading] = useState(false)
 
     const loadScript = (src: any) => {
         return new Promise((resolve) => {
@@ -42,6 +45,7 @@ export default function PaymentComponent() {
     };
 
     const displayRazorpay = async () => {
+        setLoading(true)
         const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js');
 
         if (!res) {
@@ -71,7 +75,12 @@ export default function PaymentComponent() {
             image: 'https://res.cloudinary.com/dowcmx0gb/image/upload/v1716844087/projects/tpxe8wujdgokzwawjnzu.jpg',
             order_id: order_id,
             handler: handlePaymentSuccess,
-
+            modal: {
+                ondismiss: () => {
+                    setLoading(false);
+                    toast.info('Payment cancelled');
+                }
+            },
             prefill: {
                 name: 'Diptanshu Bhawsar',
                 email: 'your-email@example.com',
@@ -93,7 +102,8 @@ export default function PaymentComponent() {
         <div>
             <button className="delay bg-[#6D37FF] md:w-fit w-full font-bold text-white py-2 md:mr-8 px-4 rounded-lg mt-4 hover:bg-blue-600 transition-colors duration-300"
                 data-delay="0.5"
-                style={{ animationDelay: "0.5s" }} onClick={displayRazorpay}>Support My Work: Buy me a Coffee</button>
+                style={{ animationDelay: "0.5s" }} onClick={displayRazorpay}>{loading ? <Loader size={24} /> : "Support My Work: Buy me a Coffee"}
+            </button>
 
         </div>
     );
