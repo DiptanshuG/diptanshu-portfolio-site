@@ -3,8 +3,14 @@
 import React from "react";
 import ScrollIcon from "@/components/scrollIcon/ScrollIcon";
 import Canvas from "@/components/canvas";
+import useScrollToSection from "../hook/useScrollToSection";
 
-const Home = () => {
+interface HomeProps {
+  scrollToSection: () => void;
+}
+
+const Home: React.FC<HomeProps> = () => {
+  const { scrollToSection } = useScrollToSection();
   return (
     <div className="relative">
       {/* Set canvas as background */}
@@ -52,7 +58,9 @@ const Home = () => {
               Diptanshu Bhawsar
             </span>
             <div className="flex justify-center items-center mt-8 md:mt-0">
-              {/* <ScrollIcon /> */}
+              <div onClick={scrollToSection}>
+                <ScrollIcon />
+              </div>{" "}
             </div>
           </div>
         </div>

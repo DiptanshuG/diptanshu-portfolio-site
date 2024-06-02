@@ -1,12 +1,11 @@
 import type { Metadata, Viewport } from "next";
 
 const APP_NAME = "Personal App";
-const APP_DEFAULT_TITLE = "My Personal PWA App";
+const APP_DEFAULT_TITLE = "My Personal Web App";
 const APP_TITLE_TEMPLATE = "%s - Personal App";
 const APP_DESCRIPTION = "Displaying Diptanshu Info!";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
 
 export const viewport: Viewport = {
   themeColor: "#FFFFFF",
@@ -59,24 +58,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="manifest" href="/manifest.json" />
-
       </head>
-      <body cz-shortcut-listen="true" className={inter.className}>{children}</body>
+      <body cz-shortcut-listen="true" className={inter.className}>
+        {children}
+      </body>
     </html>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

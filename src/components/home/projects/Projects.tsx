@@ -17,7 +17,10 @@ import dao from "~/images/Dao.jpeg";
 import battleChan from "~/images/battlechan.jpeg";
 import pevnost from "~/images/pevnostclient.jpeg";
 
-const Projects: React.FC = () => {
+interface ProjectsProps {
+  sectionRef: React.RefObject<HTMLDivElement>;
+}
+const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
   const projectsData = [
     {
       image: DexOrdi,
@@ -112,34 +115,40 @@ const Projects: React.FC = () => {
       title: "BlockseBlock - Empowering Student Projects and Hackathons",
       technologies: " ReactJS, TailwindCSS, MongoDB",
       link: "https://blockseblock.com/",
-      description: "Revolutionizing student collaboration and hackathon management with intuitive design and powerful functionality."
+      description:
+        "Revolutionizing student collaboration and hackathon management with intuitive design and powerful functionality.",
     },
     {
       image: dao,
       title: "Daouhouse -  A blockchain-based platform",
-      technologies: "Rust , Tailwind, Difinity, React Js Plug wallet , Internet Identity",
+      technologies:
+        "Rust , Tailwind, Difinity, React Js Plug wallet , Internet Identity",
       link: "https://qcvph-nqaaa-aaaak-aksra-cai.icp0.io/",
-      description: "Daouhouse Project: A blockchain-based platform for creating DAO organizations, enabling proposal voting and organizational changes based on community votes."
+      description:
+        "Daouhouse Project: A blockchain-based platform for creating DAO organizations, enabling proposal voting and organizational changes based on community votes.",
     },
     {
       image: battleChan,
       title: "Battlechan -  A blockchain-based platform",
-      technologies: "Motoko , Tailwind, Difinity, React Js Plug wallet , Internet Identity",
+      technologies:
+        "Motoko , Tailwind, Difinity, React Js Plug wallet , Internet Identity",
       link: "https://rinem-tyaaa-aaaak-qigua-cai.icp0.io/",
-      description: "Battlechan: A blockchain-based platform built with Motoko and React.js, where users can create and find posts, participate in battles by upvoting or downvoting, and showcase their skills."
+      description:
+        "Battlechan: A blockchain-based platform built with Motoko and React.js, where users can create and find posts, participate in battles by upvoting or downvoting, and showcase their skills.",
     },
     {
       image: pevnost,
       title: "Pevnost Corporation",
       technologies: "React.js, Bootstrap",
       link: "https://pevnost-coorporation.vercel.app/",
-      description: "Pevnost Corporation's website showcases their expertise in providing technical, accounting, and HR services. Built with React.js and Bootstrap, the site offers a sleek and professional platform for marketing their business."
-    }
+      description:
+        "Pevnost Corporation's website showcases their expertise in providing technical, accounting, and HR services. Built with React.js and Bootstrap, the site offers a sleek and professional platform for marketing their business.",
+    },
   ];
 
   return (
     <div className="showcase h-fit w-screen  flex justify-center items-center bg-[rgb(9,4,22)]">
-      <div className="mx-auto px-4  h-full p-8">
+      <div className="mx-auto px-4  h-full p-8" ref={sectionRef}>
         <h2 className="text-4xl my-6 font-bold mb-8 text-white text-center font-extrabold">
           Selected Projects
         </h2>
