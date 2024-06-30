@@ -9,6 +9,7 @@ import Header from "@/components/Header";
 import Contact from "@/components/home/contacts/Contact";
 import Footer from "@/components/Footer/Footer";
 import Canvas from "@/components/canvas";
+import JourneySection from "@/components/home/Journey/Journey";
 
 const Main = () => {
   const [theme, setTheme] = useState("light");
@@ -20,6 +21,8 @@ const Main = () => {
     <div className="h-screen overflow-x-hidden bg-black">
       <Header theme={theme} toggleTheme={toggleTheme} />
       <Home />
+
+      <JourneySection/>
       <Projects />
 
       <About />

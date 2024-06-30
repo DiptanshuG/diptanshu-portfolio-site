@@ -18,6 +18,8 @@ import reactLogo from "~/logos/react.png";
 import jquery from "~/logos/jquery.png";
 import jira from "~/logos/jira.png";
 import bitbucket from "~/logos/bitbucket (1).png";
+import Golang from "~/golang.svg";
+import aws from "~/logos/aws.png";
 import "./Skills.css";
 import Image from "next/image";
 
@@ -32,6 +34,8 @@ const technologies = [
   { icon: github, title: "GitHub" },
   { icon: gitlab, title: "GitLab" },
   { icon: node, title: "Node.js" },
+  {icon: Golang, title : "Golang" },
+  {icon: aws, title : "AWS" },
   { icon: npm, title: "npm" },
   { icon: php, title: "PHP" },
   { icon: semantic, title: "Semantic UI" },
