@@ -55,7 +55,7 @@ const Skills: React.FC = () => {
           "linear-gradient(135deg, rgba(3,1,8,1) 0%, rgba(5,2,11,1) 25%, rgba(9,4,22,1) 100%)",
       }}
     >
-        <h2 className="text-4xl my-6 font-bold mb-8 text-white text-center font-extrabold">
+        <h2 className="text-4xl my-6 font-bold mb-8 text-white text-center font-extrabold text-orange-400">
         My Tech Stack</h2>
       <div className="flex flex-wrap justify-center p-8 ">
         {/* Map over technologies array */}

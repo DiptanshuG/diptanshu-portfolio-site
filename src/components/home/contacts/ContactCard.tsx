@@ -19,18 +19,18 @@ const socialMediaLinks = [
 
 const ContactCard: React.FC = () => {
   return (
-    <div className="h-[370px] w-fit bg-[#242424] border border-transparent rounded-lg transition-all duration-1000 ease-in-out p-4">
+    <div className="h-[370px] w-fit bg-black border border-orange-400 rounded-lg transition-all duration-1000 ease-in-out p-4">
       <div>
-        <h2 className="text-4xl my-6 font-bold mb-8 text-white text-center font-extrabold">
+        <h2 className="text-4xl my-6 font-bold text-center mb-8 text-orange-400 font-extrabold">
           Contact Me
         </h2>
         <div className="flex flex-col items-center justify-center p-4">
-          <a className="contactInfo break-all truncate" href="mailto:diptanshubhawsar50@gmail.com">
+          <a className="contactInfo break-all truncate text-white hover:text-orange-400 transition-colors duration-300" href="mailto:diptanshubhawsar50@gmail.com">
             <AiOutlineMail className="inline-block mr-2" />
             diptanshubhawsar50@gmail.com
           </a>
           <br />
-          <a className="contactInfo" href="tel:+917582974834">
+          <a className="contactInfo text-white hover:text-orange-400 transition-colors duration-300" href="tel:+917582974834">
             <AiOutlinePhone className="inline-block mr-2" />
             +91 7582974834
           </a>
@@ -42,8 +42,9 @@ const ContactCard: React.FC = () => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
+              className="text-white hover:text-orange-400 transition-colors duration-300"
             >
-              <link.icon className="socialIcon" style={{ fontSize: "34px" }} title={link.name} />
+              <link.icon style={{ fontSize: "34px" }} title={link.name} />
             </a>
           ))}
         </div>

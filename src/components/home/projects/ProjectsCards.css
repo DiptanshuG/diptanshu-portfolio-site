@@ -73,3 +73,32 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 }
+
+
+/* ProjectsCards.css */
+.project-card {
+  transition: transform 0.5s, box-shadow 0.5s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+  transition: transform 0.5s;
+}
+
+.project-image:hover {
+  transform: scale(1.1);
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}

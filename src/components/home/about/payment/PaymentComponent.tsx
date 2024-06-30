@@ -100,7 +100,7 @@ export default function PaymentComponent() {
 
     return (
         <div>
-            <button className="delay bg-[#6D37FF] md:w-fit w-full font-bold text-white py-2 md:mr-8 px-4 rounded-lg mt-4 hover:bg-blue-600 transition-colors duration-300"
+            <button className="delay  bg-orange-400 md:w-fit w-full font-bold text-black py-2 md:mr-8 px-4 rounded-lg mt-4 hover:bg-blue-600 transition-colors duration-300"
                 data-delay="0.5"
                 style={{ animationDelay: "0.5s" }} onClick={displayRazorpay}>{loading ? <Loader size={24} /> : "Support My Work: Buy me a Coffee"}
             </button>
