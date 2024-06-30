@@ -36,15 +36,15 @@ const About: React.FC = () => {
               <p>Hi There!</p>
               <br />
               <p>
-                I'm Diptanshu, a passionate <b className="text-orange-400">front-end web developer</b> and <b className="text-orange-400">designer</b>. Over the past three years, I've grown from developing Web3 frontends to becoming a full-stack developer with a diverse skill set.
+                I&aposm Diptanshu, a passionate <b className="text-orange-400">front-end web developer</b> and <b className="text-orange-400">designer</b>. Over the past three years, I&aposve grown from developing Web3 frontends to becoming a full-stack developer with a diverse skill set.
               </p>
               <br />
               <p>
-                I've worked on transforming ecommerce experiences, innovating hackathon platforms, migrating from PHP to React and GoLang, and delving into Web3 projects. My journey has equipped me with expertise in React.js, Node.js, GoLang, Docker, and more.
+                I&aposve worked on transforming ecommerce experiences, innovating hackathon platforms, migrating from PHP to React and GoLang, and delving into Web3 projects. My journey has equipped me with expertise in React.js, Node.js, GoLang, Docker, and more.
               </p>
               <br />
               <p>
-                My goal is to exceed expectations by delivering visually stunning and intuitive websites that effectively communicate the client's message.
+                My goal is to exceed expectations by delivering visually stunning and intuitive websites that effectively communicate the client&aposs message.
               </p>
             </div>
             <button
