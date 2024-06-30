@@ -18,7 +18,7 @@ const JourneySection: React.FC = () => {
 
       <div className="mb-6 p-4 bg-gray-800 rounded-lg shadow-lg">
         <h2 className="text-3xl font-semibold mb-4 text-orange-400">
-          Transforming a Restaurant's Ecommerce Experience
+          Transforming a Restaurant&aposs Ecommerce Experience
         </h2>
         <p>
           My next significant project involved creating an ecommerce platform for a restaurant. This project was multifaceted, requiring me to work on:
@@ -191,7 +191,7 @@ const JourneySection: React.FC = () => {
           Summary
         </h2>
         <p>
-          In just three years, I've evolved from a frontend developer working on Web3 projects to a versatile full-stack developer with expertise in various cutting-edge technologies. This journey has equipped me with a comprehensive skill set, making me a valuable asset to any innovative team. I am eager to leverage my experience and skills to drive impactful projects and contribute to the growth of forward-thinking organizations.
+          In just three years, I&aposve evolved from a frontend developer working on Web3 projects to a versatile full-stack developer with expertise in various cutting-edge technologies. This journey has equipped me with a comprehensive skill set, making me a valuable asset to any innovative team. I am eager to leverage my experience and skills to drive impactful projects and contribute to the growth of forward-thinking organizations.
         </p>
       </div>
     </div>
