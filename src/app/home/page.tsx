@@ -5,11 +5,7 @@ import ScrollIcon from "@/components/scrollIcon/ScrollIcon";
 import Canvas from "@/components/canvas";
 import useScrollToSection from "../hook/useScrollToSection";
 
-interface HomeProps {
-  scrollToSection: () => void;
-}
-
-const Home: React.FC<HomeProps> = () => {
+const Home: React.FC = () => {
   const { scrollToSection } = useScrollToSection();
   return (
     <div className="relative">
