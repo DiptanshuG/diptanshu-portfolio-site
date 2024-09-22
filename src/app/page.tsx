@@ -22,7 +22,7 @@ const Main = () => {
   return (
     <div className="h-screen overflow-x-hidden bg-black">
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <Home scrollToSection={scrollToSection} />
+      <Home />
       <Projects sectionRef={sectionRef} />
 
       <About />
