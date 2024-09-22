@@ -26,7 +26,7 @@ const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
       image: DexOrdi,
       title: "Dexordi Project based on blockchain technology (in progress )",
       description: "Description for Project 1",
-      link: "https://dexordi-frontend.atican.dev/",
+      link: "https://dexordi.com/",
       technologies: "Next JS, Tailwind",
     },
     {
@@ -57,7 +57,7 @@ const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
         "Imperial Assets (building selling platforms based on blockchain bids type system)",
       technologies: "Next JS, Tailwind , D3",
       description: "Description for Project 5",
-      link: "https://imperial-frontend.atican.dev/",
+      link: "https://imperialsto.com/",
     },
     {
       image: kitchenheebee,
@@ -106,7 +106,7 @@ const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
       image: uniqart,
       title: "A platform for buy and sell NFT's (Non-fungible token)",
       technologies: "ReactJS, Bootstrap",
-      link: "https://demo.uniqart.io/",
+      link: "https://uniqart.io/",
 
       description: "Description for Project 12",
     },
@@ -140,7 +140,7 @@ const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
       image: pevnost,
       title: "Pevnost Corporation",
       technologies: "React.js, Bootstrap",
-      link: "https://pevnost-coorporation.vercel.app/",
+      link: "https://pevnostcorporation.com/",
       description:
         "Pevnost Corporation's website showcases their expertise in providing technical, accounting, and HR services. Built with React.js and Bootstrap, the site offers a sleek and professional platform for marketing their business.",
     },
