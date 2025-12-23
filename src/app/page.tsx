@@ -9,21 +9,21 @@ import Header from "@/components/Header";
 import Contact from "@/components/home/contacts/Contact";
 import Footer from "@/components/Footer/Footer";
 import Canvas from "@/components/canvas";
-import useScrollToSection from "./hook/useScrollToSection";
+import { ScrollProvider, useScrollContext } from "./context/ScrollContext";
 
-const Main = () => {
+const MainContent = () => {
   const [theme, setTheme] = useState("light");
+  const { sectionRef } = useScrollContext();
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
-  const { scrollToSection, sectionRef } = useScrollToSection();
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[rgb(var(--background-rgb))] text-white">
       <Header theme={theme} toggleTheme={toggleTheme} />
       <main className="flex flex-col gap-16 md:gap-24">
-        <Home scrollToSection={scrollToSection} />
+        <Home />
         <Projects sectionRef={sectionRef} />
         <About />
         <Skills />
@@ -35,6 +35,14 @@ const Main = () => {
         <Footer />
       </footer>
     </div>
+  );
+};
+
+const Main = () => {
+  return (
+    <ScrollProvider>
+      <MainContent />
+    </ScrollProvider>
   );
 };
 
