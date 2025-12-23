@@ -5,28 +5,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 231, 236, 243;
+  --background-rgb: 3, 7, 18;
+  --card-rgb: 15, 23, 42;
+  --accent: #7c3aed;
+  --accent-strong: #a855f7;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  font-family: "Poppins", sans-serif;
+  background: rgb(var(--background-rgb));
+  font-family: "Poppins", "Be Vietnam Pro", system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 @layer utilities {
@@ -35,63 +33,32 @@ body {
   }
 }
 
-/* Base reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/*Body styling*/
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: rgb(0, 0, 0);
-}
-
-/*Container styling*/
-.landing {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  height: 50vh;
-  box-shadow: 0 32px 32px -8px rgba(0, 0, 0, 0.5);
-}
-
-/* Distortion Styles*/
-.distortion {
-  position: fixed;
-  width: 50vw;
-  height: 60vh;
-}
 @layer base {
   ::-webkit-scrollbar {
     width: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background: rgba(214, 219, 220, 0.3);
+    background: rgba(255, 255, 255, 0.06);
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 4px;
-    transition: background 0.3s; /* Add transition for smooth effect */
+    background: rgba(124, 58, 237, 0.7);
+    border-radius: 999px;
+    transition: background 0.3s ease;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.7); /* Change background color on hover */
+    background: rgba(168, 85, 247, 0.85);
     cursor: pointer;
   }
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -100,5 +67,37 @@ body {
 }
 
 .fade-in {
-  animation: fadeIn 1s ease-out forwards;
+  animation: fadeIn 0.9s ease-out forwards;
+}
+
+/* Utility classes for consistent spacing + surfaces */
+.section-shell {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.glass-surface {
+  background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.02)
+    ),
+    rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(124, 58, 237, 0.14);
+  color: #e9ddff;
+  font-weight: 600;
+  border: 1px solid rgba(124, 58, 237, 0.35);
 }

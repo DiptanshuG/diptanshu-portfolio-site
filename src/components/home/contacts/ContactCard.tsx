@@ -13,7 +13,7 @@ const socialMediaLinks = [
   { name: "Twitter", url: "https://twitter.com/DiptanshuBhaws3", icon: FaTwitter },
   { name: "Instagram", url: "https://www.instagram.com/diptanshu_bhawsar/", icon: FaInstagram },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/diptanshu-bhawsar-503b201aa/", icon: FaLinkedinIn },
-  { name: "Instagram (Coding)", url: "https://www.instagram.com/codding_thing/", icon: FaInstagram },
+  { name: "Instagram (Coding)", url: "https://www.instagram.com/codding_things/", icon: FaInstagram },
   { name: "YouTube", url: "https://www.youtube.com/@StudyFreeStudent", icon: FaYoutube },
 ];
 

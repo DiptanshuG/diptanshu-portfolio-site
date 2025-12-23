@@ -20,20 +20,20 @@ const Main = () => {
   const { scrollToSection, sectionRef } = useScrollToSection();
 
   return (
-    <div className="h-screen overflow-x-hidden bg-black">
+    <div className="min-h-screen overflow-x-hidden bg-[rgb(var(--background-rgb))] text-white">
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <Home />
-      <Projects sectionRef={sectionRef} />
-
-      <About />
-
-      <Skills />
-
-      <div style={{ position: "relative" }}>
-        <Contact />
-      </div>
-
-      <Footer />
+      <main className="flex flex-col gap-16 md:gap-24">
+        <Home />
+        <Projects sectionRef={sectionRef} />
+        <About />
+        <Skills />
+        <div style={{ position: "relative" }}>
+          <Contact />
+        </div>
+      </main>
+      <footer className="mt-10">
+        <Footer />
+      </footer>
     </div>
   );
 };

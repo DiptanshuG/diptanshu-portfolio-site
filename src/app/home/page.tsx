@@ -8,55 +8,63 @@ import useScrollToSection from "../hook/useScrollToSection";
 const Home: React.FC = () => {
   const { scrollToSection } = useScrollToSection();
   return (
-    <div className="relative">
-      {/* Set canvas as background */}
+    <div className="relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Canvas />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80" />
       </div>
 
-      <div className="h-screen pt-20 relative z-10">
-        <div className="flex flex-col justify-between h-[80%] pt-20 md:px-8">
-          <div className="md:m-8">
-            <div className="flex flex-col items-start text-xl font-normal md:text-3xl pl-8 fade-in">
-              <p
-                className="fade-in text-white"
-                style={{ animationDelay: "0.5s" }}
-              >
-                Frontend Expert / Designer
+      <div className="min-h-screen pt-28 relative z-10 flex items-center">
+        <div className="section-shell w-full">
+          <div className="glass-surface rounded-3xl px-6 md:px-10 py-10 md:py-14 flex flex-col gap-10">
+            <div className="flex flex-wrap gap-3 items-center fade-in">
+              <span className="pill">Frontend Expert · Full-Stack Builder</span>
+              <span className="text-sm text-white/70">
+                React • Next.js • TypeScript • Design Systems
+              </span>
+            </div>
+
+            <div className="flex flex-col gap-4 md:gap-5 fade-in">
+              <p className="text-3xl md:text-6xl font-extrabold tracking-tight text-white">
+                Beyond the ordinary:
               </p>
-              <p
-                className="fade-in text-white"
-                style={{ animationDelay: "1s" }}
-              >
-                Full-Stack Developer
+              <p className="text-3xl md:text-6xl font-extrabold tracking-tight text-white">
+                <span className="text-purple-400">Original</span> and{" "}
+                <span className="text-purple-400">distinctive</span> product
+                experiences
+              </p>
+              <p className="text-lg md:text-xl text-white/80 max-w-3xl">
+                I design and ship performant interfaces that feel intentional,
+                consistent, and memorable — from prototypes to production.
               </p>
             </div>
 
-            <div className="flex flex-col items-start my-5 text-3xl md:text-6xl font-extrabold pl-8">
-              <p
-                className="fade-in text-white"
-                style={{ animationDelay: "1.5s" }}
+            <div className="flex flex-col md:flex-row md:items-center gap-6 fade-in">
+              <button
+                onClick={scrollToSection}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-purple-900/40 transition-transform duration-200 hover:scale-[1.02]"
               >
-                Beyond the extraordinary:
-              </p>
-              <p className="fade-in" style={{ animationDelay: "2s" }}>
-                <span className="text-purple-600">Original</span> and{" "}
-                <span className="text-purple-600">distinctive</span>
-              </p>
-              <p className="fade-in" style={{ animationDelay: "2.5s" }}>
-                Design X development
-              </p>
+                View featured work
+              </button>
+              <div className="flex items-center gap-4 text-white/80">
+                <span className="h-10 w-10 rounded-full bg-white/10 grid place-items-center text-lg font-semibold">
+                  DB
+                </span>
+                <div className="flex flex-col">
+                  <span className="font-semibold text-white">
+                    Diptanshu Bhawsar
+                  </span>
+                  <span className="text-sm text-white/70">
+                    Building immersive UI for the web
+                  </span>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div className="m-8 fade-in" style={{ animationDelay: "3s" }}>
-            <span className="font-normal text-xl md:text-2xl">
-              Diptanshu Bhawsar
-            </span>
-            <div className="flex justify-center items-center mt-8 md:mt-0">
+            <div className="flex justify-start md:justify-end fade-in">
               <div onClick={scrollToSection}>
                 <ScrollIcon />
-              </div>{" "}
+              </div>
             </div>
           </div>
         </div>

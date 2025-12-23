@@ -24,34 +24,30 @@ const ProjectsCards: React.FC<ProjectsCardsProps> = ({
       href={project.link}
       target="_blank"
       rel="noopener noreferrer"
-      className={`project-card ${className} rounded-xl mx-4`}
+      className={`project-card group ${className || ""}`}
+      aria-label={`Open ${project.title}`}
     >
       <div className="project-image">
         <Image
           src={project.image}
-          alt="Project"
-          layout="fill"
-          objectFit="cover"
+          alt={project.title}
+          fill
+          className="project-image-img"
         />
       </div>
+      <div className="project-overlay" />
       <div className="project-info">
-        <h3
-          className={` ${
-            project.title ===
-            "BlockseBlock - Empowering Student Projects and Hackathons"
-              ? "project-title-white"
-              : "project-title"
-          }`}
-        >
-          {project.title}
-        </h3>
-        <p
-          className={`project-description text-sm break-all ${
-            project.title === "BlockseBlock" ? "text-white" : ""
-          }`}
-        >
-          {project.technologies}
-        </p>
+        <div className="project-tag">{project.technologies}</div>
+        <h3 className="project-title">{project.title}</h3>
+        {project.description && (
+          <p className="project-description">{project.description}</p>
+        )}
+        <div className="project-footer">
+          <span className="project-tech">{project.technologies}</span>
+          <span className="project-link">
+            View live <span aria-hidden>↗</span>
+          </span>
+        </div>
       </div>
     </a>
   );
