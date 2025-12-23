@@ -23,7 +23,7 @@ const Main = () => {
     <div className="min-h-screen overflow-x-hidden bg-[rgb(var(--background-rgb))] text-white">
       <Header theme={theme} toggleTheme={toggleTheme} />
       <main className="flex flex-col gap-16 md:gap-24">
-        <Home />
+        <Home scrollToSection={scrollToSection} />
         <Projects sectionRef={sectionRef} />
         <About />
         <Skills />

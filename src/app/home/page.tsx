@@ -3,10 +3,12 @@
 import React from "react";
 import ScrollIcon from "@/components/scrollIcon/ScrollIcon";
 import Canvas from "@/components/canvas";
-import useScrollToSection from "../hook/useScrollToSection";
 
-const Home: React.FC = () => {
-  const { scrollToSection } = useScrollToSection();
+interface HomeProps {
+  scrollToSection: () => void;
+}
+
+const Home: React.FC<HomeProps> = ({ scrollToSection }) => {
   return (
     <div className="relative overflow-hidden">
       <div className="absolute inset-0 z-0">

@@ -68,7 +68,7 @@ const Footer = () => {
     <footer className="bg-black text-white py-4 relative">
       {/* <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full" /> */}
       <p className="text-center" id="trademark">
-        ©2024 Diptanshu bhawsar 
+        ©{new Date().getFullYear()} Diptanshu Bhawsar
       </p>
     </footer>
   );
