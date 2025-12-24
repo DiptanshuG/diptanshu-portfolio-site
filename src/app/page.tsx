@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Home from "./home/page";
+import Home from "@/components/home/Home";
 import Projects from "@/components/home/projects/Projects";
 import About from "@/components/home/about/About";
 import Skills from "@/components/home/skills/Skills";

@@ -33,6 +33,13 @@ export const ScrollProvider: React.FC<{ children: React.ReactNode }> = ({
 export const useScrollContext = () => {
   const context = useContext(ScrollContext);
   if (context === undefined) {
+    // During static generation, return a no-op function
+    if (typeof window === "undefined") {
+      return {
+        sectionRef: { current: null },
+        scrollToSection: () => {},
+      };
+    }
     throw new Error("useScrollContext must be used within a ScrollProvider");
   }
   return context;
