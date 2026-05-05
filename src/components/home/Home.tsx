@@ -9,55 +9,63 @@ const Home: React.FC = () => {
     const { scrollToSection } = useScrollContext();
 
     return (
-        <div className="relative overflow-hidden">
+        <section id="hero" className="relative overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <Canvas />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/40 to-black/90" />
             </div>
 
             <div className="min-h-screen pt-28 relative z-10 flex items-center">
                 <div className="section-shell w-full">
-                    <div className="glass-surface rounded-3xl px-6 md:px-10 py-10 md:py-14 flex flex-col gap-10">
-                        <div className="flex flex-wrap gap-3 items-center fade-in">
-                            <span className="pill">Frontend Expert · Full-Stack Builder</span>
+                    <div className="glass-surface rounded-[2rem] px-6 md:px-10 py-10 md:py-14 flex flex-col gap-10">
+                        <div className="flex flex-wrap items-center gap-3 fade-in">
+                            <span className="pill">Senior Frontend Engineer</span>
                             <span className="text-sm text-white/70">
-                                React • Next.js • TypeScript • Design Systems
+                                React • Next.js • TypeScript • Web Performance
                             </span>
                         </div>
 
                         <div className="flex flex-col gap-4 md:gap-5 fade-in">
-                            <p className="text-3xl md:text-6xl font-extrabold tracking-tight text-white">
-                                Beyond the ordinary:
+                            <p className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">
+                                Building high-performance interfaces that move products forward.
                             </p>
-                            <p className="text-3xl md:text-6xl font-extrabold tracking-tight text-white">
-                                <span className="text-purple-400">Original</span> and{" "}
-                                <span className="text-purple-400">distinctive</span> product
-                                experiences
-                            </p>
-                            <p className="text-lg md:text-xl text-white/80 max-w-3xl">
-                                I design and ship performant interfaces that feel intentional,
-                                consistent, and memorable — from prototypes to production.
+                            <p className="text-lg md:text-2xl text-white/75 max-w-3xl">
+                                I help teams ship polished SaaS and marketplace experiences with modern frontend architecture, design system discipline, and measurable product outcomes.
                             </p>
                         </div>
 
-                        <div className="flex flex-col md:flex-row md:items-center gap-6 fade-in">
+                        <div className="grid gap-4 md:grid-cols-3 fade-in">
+                            <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+                                <p className="text-xs uppercase tracking-[0.24em] text-white/50">Experience</p>
+                                <p className="mt-3 text-3xl font-bold text-white">4+ years</p>
+                                <p className="text-sm text-white/60 mt-1">Developing customer-facing digital products.</p>
+                            </div>
+                            <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+                                <p className="text-xs uppercase tracking-[0.24em] text-white/50">Impact</p>
+                                <p className="mt-3 text-3xl font-bold text-white">50+</p>
+                                <p className="text-sm text-white/60 mt-1">UI screens shipped for enterprise and consumer apps.</p>
+                            </div>
+                            <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+                                <p className="text-xs uppercase tracking-[0.24em] text-white/50">Focus</p>
+                                <p className="mt-3 text-3xl font-bold text-white">Performance</p>
+                                <p className="text-sm text-white/60 mt-1">Fast, resilient, accessible frontend journeys.</p>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between fade-in">
                             <button
                                 onClick={scrollToSection}
-                                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-purple-900/40 transition-transform duration-200 hover:scale-[1.02]"
+                                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-purple-900/30 transition-transform duration-200 hover:scale-[1.02]"
                             >
-                                View featured work
+                                Explore featured work
                             </button>
                             <div className="flex items-center gap-4 text-white/80">
-                                <span className="h-10 w-10 rounded-full bg-white/10 grid place-items-center text-lg font-semibold">
+                                <span className="h-12 w-12 rounded-full bg-white/10 grid place-items-center text-lg font-semibold">
                                     DB
                                 </span>
                                 <div className="flex flex-col">
-                                    <span className="font-semibold text-white">
-                                        Diptanshu Bhawsar
-                                    </span>
-                                    <span className="text-sm text-white/70">
-                                        Building immersive UI for the web
-                                    </span>
+                                    <span className="font-semibold text-white">Diptanshu Bhawsar</span>
+                                    <span className="text-sm text-white/70">Design-driven frontend for business growth</span>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +78,7 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

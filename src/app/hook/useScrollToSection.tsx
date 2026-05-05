@@ -1,7 +1,7 @@
 import { useRef } from "react";
 
 interface UseScrollToSection {
-  sectionRef: React.RefObject<HTMLDivElement>;
+  sectionRef: React.RefObject<HTMLDivElement | null>;
   scrollToSection: () => void;
 }
 

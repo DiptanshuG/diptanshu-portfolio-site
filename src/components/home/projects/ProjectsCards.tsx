@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import "./ProjectsCards.css";
 
 interface Project {
-  image: StaticImageData;
+  image: StaticImageData | string;
   title: string;
   technologies?: string;
   description?: string;
@@ -19,6 +19,8 @@ const ProjectsCards: React.FC<ProjectsCardsProps> = ({
   project,
   className,
 }) => {
+  const isRemoteImage = typeof project.image === "string";
+
   return (
     <a
       href={project.link}
@@ -28,12 +30,21 @@ const ProjectsCards: React.FC<ProjectsCardsProps> = ({
       aria-label={`Open ${project.title}`}
     >
       <div className="project-image">
-        <Image
-          src={project.image}
-          alt={project.title}
-          fill
-          className="project-image-img"
-        />
+        {isRemoteImage ? (
+          <img
+            src={project.image as string}
+            alt={project.title}
+            className="project-image-img"
+          />
+        ) : (
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            unoptimized
+            className="project-image-img"
+          />
+        )}
       </div>
       <div className="project-overlay" />
       <div className="project-info">
@@ -43,9 +54,8 @@ const ProjectsCards: React.FC<ProjectsCardsProps> = ({
           <p className="project-description">{project.description}</p>
         )}
         <div className="project-footer">
-          <span className="project-tech">{project.technologies}</span>
           <span className="project-link">
-            View live <span aria-hidden>↗</span>
+            View project <span aria-hidden>↗</span>
           </span>
         </div>
       </div>

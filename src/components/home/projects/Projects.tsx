@@ -18,80 +18,88 @@ import battleChan from "~/images/battlechan.jpeg";
 import pevnost from "~/images/pevnostclient.jpeg";
 
 interface ProjectsProps {
-  sectionRef: React.RefObject<HTMLDivElement>;
+  sectionRef: React.RefObject<HTMLDivElement | null>;
 }
 const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
   const projectsData = [
     {
       image: DexOrdi,
-      title: "Dexordi Project based on blockchain technology (in progress )",
-      description: "Description for Project 1",
+      title: "Dexordi — Blockchain-native marketplace",
+      description:
+        "Spearheaded frontend architecture for a Web3 marketplace, improving token listing UX and onboarding flows.",
       link: "https://dexordi.com/",
-      technologies: "Next JS, Tailwind",
+      technologies: "Next.js, Tailwind, Web3",
     },
     {
       image: admin,
-      title: "Admin-Dashboard for management CRUD-Operation",
-      technologies: "React JS, Node.js, Bootstrap",
+      title: "Heebee Admin Dashboard",
+      technologies: "React, Node.js, Bootstrap",
       link: "https://admin.heebee.in/",
-      description: "Description for Project 2",
+      description:
+        "Built an admin panel for operations teams to manage orders, users, and inventory with optimized data grids.",
     },
     {
       image: dukkandar,
-      title:
-        "Dukkandaar seller module project (similar to meesho seller supplier )",
-      technologies: "React, react-bootstrap , typescript ",
-      description: "Description for Project 3",
+      title: "Dukkandar Seller Portal",
+      technologies: "React, TypeScript, Bootstrap",
+      description:
+        "Designed seller onboarding and inventory workflows for a marketplace-style supplier portal.",
       link: "https://seller.quadbtech.com/",
     },
     {
       image: heebeecustomer,
-      title: "Customer-Online-Order",
-      technologies: "React.js, Tailwind, Node.js, postgre'sql",
+      title: "Heebee Customer Ordering Experience",
+      technologies: "React, Tailwind, Node.js, PostgreSQL",
       link: "https://heebee-customer-new.vercel.app/",
-      description: "Description for Project 4",
+      description:
+        "Delivered a responsive order flow with rich product discovery and mobile-first checkout experiences.",
     },
     {
       image: imperial,
-      title:
-        "Imperial Assets (building selling platforms based on blockchain bids type system)",
-      technologies: "Next JS, Tailwind , D3",
-      description: "Description for Project 5",
+      title: "Imperial Assets Marketplace",
+      technologies: "Next.js, Tailwind, D3",
+      description:
+        "Created interactive data-driven listings and bidding experiences for a digital asset marketplace.",
       link: "https://imperialsto.com/",
     },
     {
       image: kitchenheebee,
-      title: "Project 6",
-      technologies: "ReactJs, Redux , Bootstrap, NodeJs ,PostgreSQL ",
-      description: "Description for Project 6",
+      title: "Kitchen Heebee Business Portal",
+      technologies: "React, Redux, Bootstrap, Node.js, PostgreSQL",
+      description:
+        "Built a business dashboard for kitchen operations with order tracking and supplier management.",
       link: "https://kitchen.heebee.in/",
     },
     {
       image: kitchenIqLanding,
-      technologies: "Html, CSS, JS, PHP, MYSQL",
-      title: "Static Template",
-      description: "Description for Project 7",
+      technologies: "HTML, CSS, JavaScript, PHP, MySQL",
+      title: "KitchenIQ Landing Page",
+      description:
+        "Crafted a high-conversion landing page for a B2B logistics brand with compelling content hierarchy.",
       link: "https://kitcheniq.quadbtech.com/",
     },
     {
       image: portfolio,
-      title: "Portfolio Services",
-      description: "Description for Project 8",
-      technologies: "Html, CSS, JS, GSAP",
+      title: "Personal Portfolio Theme",
+      description:
+        "Built a modern brand showcase experience with motion and responsive visuals for creative services.",
+      technologies: "HTML, CSS, JavaScript, GSAP",
       link: "https://info-weld.vercel.app/",
     },
     {
       image: pos,
-      title: "E-commerce Pos System",
-      description: "Description for Project 9",
-      technologies: "Express.js, PostgreSQL, ReactJs, Tailwind",
+      title: "Heebee POS Platform",
+      description:
+        "Implemented a point-of-sale dashboard with fast inventory search and checkout controls.",
+      technologies: "Express, PostgreSQL, React, Tailwind",
       link: "https://heebee-pos.vercel.app",
     },
     {
       image: rentyourdress,
-      title: "Dress rental website static frontend theme",
-      technologies: "React, react-bootstrap",
-      description: "Description for Project 10",
+      title: "Dress Rental UI Theme",
+      technologies: "React, Bootstrap",
+      description:
+        "Designed a polished rental storefront with product filters and booking-first flows.",
       link: "https://rent-your-dress.vercel.app/",
     },
     {
@@ -144,15 +152,87 @@ const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
       description:
         "Pevnost Corporation's website showcases their expertise in providing technical, accounting, and HR services. Built with React.js and Bootstrap, the site offers a sleek and professional platform for marketing their business.",
     },
+    {
+      image: "https://image.thum.io/get/jpeg/agent360.io",
+      title: "Agent360 Platform",
+      link: "http://agent360.io/",
+      technologies: "React, Next.js, SaaS",
+      description:
+        "Delivered a polished customer-facing platform for agent workflows and real-time service management.",
+    },
+    {
+      image: "https://image.thum.io/get/jpeg/buy.ca",
+      title: "Buy.ca Ecommerce Experience",
+      link: "http://buy.ca/",
+      technologies: "React, Next.js, Tailwind",
+      description:
+        "Built a responsive ecommerce storefront with fast product discovery and checkout experiences.",
+    },
+    {
+      image: "https://image.thum.io/get/jpeg/wordline.zerra.in",
+      title: "Wordline Merchant Portal",
+      link: "https://wordline.zerra.in/",
+      technologies: "React, TypeScript, PWA",
+      description:
+        "Developed a merchant portal with secure payment workflows and progressive web app capabilities.",
+    },
+    {
+      image: "https://image.thum.io/get/jpeg/mestokart.com",
+      title: "MestoKart Marketplace",
+      link: "http://mestokart.com/",
+      technologies: "React, Bootstrap, Marketplace UX",
+      description:
+        "Implemented buyer and seller web experiences for an ecommerce marketplace with robust listing and order flows.",
+    },
+    {
+      image: "https://image.thum.io/get/jpeg/seller.mestokart.com",
+      title: "MestoKart Seller Portal",
+      link: "http://seller.mestokart.com/",
+      technologies: "React, TypeScript, Admin UX",
+      description:
+        "Designed the seller portal for inventory, order management, and store controls across the MestoKart platform.",
+    },
+    {
+      image: portfolio,
+      title: "ONDC Grocery Ecommerce Apps",
+      technologies: "React, PWA, Commerce",
+      link: "https://ondc.org/",
+      description:
+        "Built grocery ecommerce interfaces aligned with ONDC marketplace guidelines for a modern retail experience.",
+    },
+    {
+      image: portfolio,
+      title: "EduTech Learning Platform",
+      technologies: "React, Node.js, Tailwind",
+      description:
+        "Implemented learning journeys and course management workflows for a modern edutech application.",
+    },
+    {
+      image: "https://image.thum.io/get/jpeg/wordline.zerra.in",
+      title: "Mobile TWA & App Publishing",
+      technologies: "PWA, Android TWA, iOS packaging",
+      link: "https://wordline.zerra.in/",
+      description:
+        "Published web experiences as Android Trusted Web Activities and prepared iOS app packaging for modern mobile distribution.",
+    },
   ];
 
   return (
-    <div className="showcase h-fit w-screen  flex justify-center items-center bg-[rgb(9,4,22)]">
-      <div className="mx-auto px-4  h-full p-8" ref={sectionRef}>
-        <h2 className="text-4xl my-6 font-bold mb-8 text-white text-center font-extrabold">
-          Selected Projects
-        </h2>
-        <div className="flex justify-center  mb-8 flex-wrap gap-6 px-4 mx-8">
+    <section id="work" className="showcase w-screen bg-[rgb(9,4,22)]">
+      <div className="section-shell mx-auto px-4 py-16" ref={sectionRef}>
+        <div className="max-w-4xl mx-auto text-center mb-12">
+          <p className="text-sm uppercase tracking-[0.3em] text-purple-300/80 mb-4">
+            Selected work
+          </p>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white">
+            Projects that demonstrate frontend leadership.
+          </h2>
+          <p className="mt-4 text-white/70 max-w-3xl mx-auto text-base md:text-lg">
+            A curated showcase of responsive, performance-minded web experiences built for marketplaces, SaaS, product platforms, and blockchain interfaces.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-6">
           {projectsData.map((project, index) => (
             <ProjectsCards
               key={index}
@@ -162,7 +242,7 @@ const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

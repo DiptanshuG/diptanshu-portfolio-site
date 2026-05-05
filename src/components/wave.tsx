@@ -1,6 +1,6 @@
 "use client"
 
-import { FC, useCallback } from 'react'
+import { FC, useEffect, useRef } from 'react'
 
 import { useCanvasContext } from '@/app/hook/useCanvas'
 import useResponsiveSize from '@/app/hook/useResponsiveSize'
@@ -13,34 +13,43 @@ const Wave: FC = () => {
   const { width, height } = useResponsiveSize()
   const { generateColor } = useColor()
 
-  let frequency = 0.013
-  let colors: { [key: string]: string } = generateColor()
-  let timer = 1
-  const waves = {
+  const colorsRef = useRef<{ [key: string]: string }>(generateColor())
+  const timerRef = useRef(1)
+  const frequencyRef = useRef(0.013)
+  const frameRef = useRef<number | null>(null)
+  const wavesRef = useRef({
     frontWave: new WaveEntity([0.0211, 0.028, 0.015], 'rgba(255,179,0,0.88)'),
     backWave: new WaveEntity([0.0122, 0.018, 0.005], 'rgba(255,179,0,0.48)'),
-  }
+  })
 
-  const render = useCallback(() => {
-    context?.clearRect(0, 0, width, height)
-    Object.entries(waves).forEach(([waveName, wave]) => {
-      wave.waveColor = colors[waveName]
-      wave.draw(context!, width, height, frequency)
-    })
-    if (timer === 500) {
-      colors = generateColor()
-      timer = 1
+  useEffect(() => {
+    if (!context || !width || !height) return
+
+    const render = () => {
+      context.clearRect(0, 0, width, height)
+      Object.entries(wavesRef.current).forEach(([waveName, wave]) => {
+        wave.waveColor = colorsRef.current[waveName]
+        wave.draw(context!, width, height, frequencyRef.current)
+      })
+
+      if (timerRef.current === 500) {
+        colorsRef.current = generateColor()
+        timerRef.current = 1
+      }
+      timerRef.current += 1
+      frequencyRef.current += 0.013
+      frameRef.current = requestAnimationFrame(render)
     }
-    timer++
-    frequency += 0.013
-    const frame=requestAnimationFrame(render)
 
-    return ()=>{
-      cancelAnimationFrame(frame)
+    render()
+
+    return () => {
+      if (frameRef.current) {
+        cancelAnimationFrame(frameRef.current)
+      }
     }
-  }, [context,width,height,generateColor])
+  }, [context, width, height, generateColor])
 
-  if (context) render()
   return null
 }
 

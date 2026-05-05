@@ -8,7 +8,6 @@ import Skills from "@/components/home/skills/Skills";
 import Header from "@/components/Header";
 import Contact from "@/components/home/contacts/Contact";
 import Footer from "@/components/Footer/Footer";
-import Canvas from "@/components/canvas";
 import { ScrollProvider, useScrollContext } from "./context/ScrollContext";
 
 const MainContent = () => {

@@ -4,19 +4,14 @@ import Canvas from "@/components/canvas";
 
 const Contact: React.FC = () => {
   return (
-    <div className="h-screen bg-[rgb(9,4,22)] items-center flex items=center justify-center">
-      <div
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-        }}
-      >
+    <section id="contact" className="relative min-h-screen bg-[rgb(9,4,22)] flex items-center justify-center py-20">
+      <div className="absolute inset-0 opacity-30">
+        <Canvas />
+      </div>
+      <div className="relative z-10 w-full max-w-md px-4 mx-auto">
         <ContactCard />
-      </div>{" "}
-      <Canvas />
-    </div>
+      </div>
+    </section>
   );
 };
 

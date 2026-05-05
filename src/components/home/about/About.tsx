@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import profile from "~/images/my.jpeg";
 import Image from "next/image";
-import PaymentComponent from "./payment/PaymentComponent";
 import ContactFormModal from "@/components/ContactFormModal";
 
 const About: React.FC = () => {
@@ -40,40 +39,45 @@ const About: React.FC = () => {
           {/* Content Section */}
           <div className="flex-1 space-y-6 fade-in" style={{ animationDelay: "0.25s" }}>
             <div className="space-y-4 text-lg md:text-xl lg:text-2xl leading-relaxed">
-              <p className="font-semibold text-2xl md:text-3xl">Hi There!,</p>
+              <p className="font-semibold text-2xl md:text-3xl">Hi there — I’m Diptanshu.</p>
 
               <p>
-                {"I'm Diptanshu. I am a "}
-                <span className="font-bold text-purple-400">
-                  front-end web developer
-                </span>
-                {" and "}
-                <span className="font-bold text-purple-400">designer</span>
-                {" with a passion for creating unique and beautiful websites. I have experience with a variety of technologies, including HTML, CSS, Javascript, React.js, Adobe Xd and "}
-                <span className="border-b-2 border-purple-400 font-semibold">more..</span>
-                .
+                I am a frontend product engineer with 4 years of experience building enterprise-grade web applications and polished, high-conversion user interfaces.
               </p>
 
               <p>
-                My goal is to not only meet, but exceed my clients&apos;
-                expectations by delivering visually stunning and intuitive
-                websites that effectively communicate their message.
+                I bring product-focused engineering and design system discipline to every project, helping teams ship faster while maintaining performance, accessibility, and brand consistency.
               </p>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2">
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+                <p className="text-sm uppercase tracking-[0.2em] text-white/60">Focus areas</p>
+                <ul className="mt-3 space-y-2 text-white/80 text-sm">
+                  <li>React & Next.js applications</li>
+                  <li>Responsive UX with polished UI</li>
+                  <li>Performance-first frontend builds</li>
+                </ul>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+                <p className="text-sm uppercase tracking-[0.2em] text-white/60">What I deliver</p>
+                <ul className="mt-3 space-y-2 text-white/80 text-sm">
+                  <li>Design system and component libraries</li>
+                  <li>Accessible and scalable interfaces</li>
+                  <li>Strong collaboration with product teams</li>
+                </ul>
+              </div>
             </div>
 
             <button
               onClick={handleModalOpen}
               className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 font-semibold text-white py-3 px-6 rounded-xl shadow-lg shadow-purple-900/40 transition-all duration-300 hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-400"
             >
-              Contact Now
+              Contact me for product work
             </button>
           </div>
         </div>
 
-        {/* Payment Component - Separate Section */}
-        <div className="mt-12 md:mt-16 fade-in" style={{ animationDelay: "0.5s" }}>
-          <PaymentComponent />
-        </div>
       </div>
 
       <ContactFormModal isOpen={isModalOpen} onClose={handleModalClose} />

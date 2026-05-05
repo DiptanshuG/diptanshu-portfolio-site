@@ -3,7 +3,7 @@
 import React, { createContext, useContext, useRef } from "react";
 
 interface ScrollContextType {
-  sectionRef: React.RefObject<HTMLDivElement>;
+  sectionRef: React.RefObject<HTMLDivElement | null>;
   scrollToSection: () => void;
 }
 

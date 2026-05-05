@@ -1,20 +1,30 @@
 import { useCallback, useEffect, useState } from 'react'
 
 const useResponsiveSize = () => {
-  const [width, setWidth] = useState(0)
-  const [height, setHeight] = useState(0)
+  const getWindowSize = useCallback(() => {
+    if (typeof window === 'undefined') {
+      return { width: 0, height: 0 }
+    }
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    }
+  }, [])
 
-  const setSizes = useCallback(() => {
-    setWidth(window.innerWidth)
-    setHeight(window.innerHeight)
-  }, [setWidth, setHeight])
+  const [size, setSize] = useState(getWindowSize)
+
+  const handleResize = useCallback(() => {
+    setSize(getWindowSize)
+  }, [getWindowSize])
 
   useEffect(() => {
-    window.addEventListener('resize', setSizes)
-    setSizes()
-  }, [setSizes])
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [handleResize])
 
-  return { width, height }
+  return { width: size.width, height: size.height }
 }
 
 export default useResponsiveSize

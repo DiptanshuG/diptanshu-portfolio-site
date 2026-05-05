@@ -1,14 +1,14 @@
 import type { Metadata, Viewport } from "next";
 
-const APP_NAME = "Personal App";
-const APP_DEFAULT_TITLE = "My Personal Web App";
-const APP_TITLE_TEMPLATE = "%s - Personal App";
-const APP_DESCRIPTION = "Displaying Diptanshu Info!";
+const APP_NAME = "Diptanshu Bhawsar";
+const APP_DEFAULT_TITLE = "Diptanshu Bhawsar | Frontend Product Engineer";
+const APP_TITLE_TEMPLATE = "%s | Diptanshu Bhawsar";
+const APP_DESCRIPTION = "Frontend product engineer with 4 years of experience building performance-first web products, design systems, and enterprise user experiences.";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
 export const viewport: Viewport = {
-  themeColor: "#FFFFFF",
+  themeColor: "#7c3aed",
 };
 
 const inter = Inter({ subsets: ["latin"] });
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     description: APP_DESCRIPTION,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: {
       default: APP_DEFAULT_TITLE,
       template: APP_TITLE_TEMPLATE,
