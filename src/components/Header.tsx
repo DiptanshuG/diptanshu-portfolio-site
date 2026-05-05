@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
             </div>
             <div>
               <p className="text-base font-semibold text-white">Diptanshu Bhawsar</p>
-              <p className="text-xs text-white/60">Frontend Product Engineer</p>
+              <p className="text-xs text-white/60">Full-stack AWS & AI Product Engineer</p>
             </div>
           </div>
 

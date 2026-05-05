@@ -42,11 +42,11 @@ const About: React.FC = () => {
               <p className="font-semibold text-2xl md:text-3xl">Hi there — I’m Diptanshu.</p>
 
               <p>
-                I am a frontend product engineer with 4 years of experience building enterprise-grade web applications and polished, high-conversion user interfaces.
+                I am a full-stack web engineer with AWS expertise and AI-enabled product experience, building modern applications that scale.
               </p>
 
               <p>
-                I bring product-focused engineering and design system discipline to every project, helping teams ship faster while maintaining performance, accessibility, and brand consistency.
+                I bring cloud-first engineering, design system discipline, and intelligent workflow design to help teams ship faster while maintaining performance, accessibility, and brand consistency.
               </p>
             </div>
 
@@ -55,8 +55,8 @@ const About: React.FC = () => {
                 <p className="text-sm uppercase tracking-[0.2em] text-white/60">Focus areas</p>
                 <ul className="mt-3 space-y-2 text-white/80 text-sm">
                   <li>React & Next.js applications</li>
-                  <li>Responsive UX with polished UI</li>
-                  <li>Performance-first frontend builds</li>
+                  <li>AWS-backed architecture and deployment</li>
+                  <li>AI-assisted product interactions</li>
                 </ul>
               </div>
               <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
@@ -64,7 +64,7 @@ const About: React.FC = () => {
                 <ul className="mt-3 space-y-2 text-white/80 text-sm">
                   <li>Design system and component libraries</li>
                   <li>Accessible and scalable interfaces</li>
-                  <li>Strong collaboration with product teams</li>
+                  <li>Cloud-ready, performance-first web products</li>
                 </ul>
               </div>
             </div>

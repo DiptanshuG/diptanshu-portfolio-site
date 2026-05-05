@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import "./ProjectsCards.css";
 
@@ -19,6 +19,7 @@ const ProjectsCards: React.FC<ProjectsCardsProps> = ({
   project,
   className,
 }) => {
+  const [imgError, setImgError] = useState(false);
   const isRemoteImage = typeof project.image === "string";
 
   return (
@@ -30,13 +31,14 @@ const ProjectsCards: React.FC<ProjectsCardsProps> = ({
       aria-label={`Open ${project.title}`}
     >
       <div className="project-image">
-        {isRemoteImage ? (
+        {isRemoteImage && !imgError ? (
           <img
             src={project.image as string}
             alt={project.title}
             className="project-image-img"
+            onError={() => setImgError(true)}
           />
-        ) : (
+        ) : !isRemoteImage ? (
           <Image
             src={project.image}
             alt={project.title}
@@ -44,6 +46,10 @@ const ProjectsCards: React.FC<ProjectsCardsProps> = ({
             unoptimized
             className="project-image-img"
           />
+        ) : (
+          <div className="project-image-fallback">
+            <span>Preview unavailable</span>
+          </div>
         )}
       </div>
       <div className="project-overlay" />

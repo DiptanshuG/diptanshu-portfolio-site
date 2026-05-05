@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
 
 const APP_NAME = "Diptanshu Bhawsar";
-const APP_DEFAULT_TITLE = "Diptanshu Bhawsar | Frontend Product Engineer";
+const APP_DEFAULT_TITLE = "Diptanshu Bhawsar | Full-stack AWS & AI Product Engineer";
 const APP_TITLE_TEMPLATE = "%s | Diptanshu Bhawsar";
-const APP_DESCRIPTION = "Frontend product engineer with 4 years of experience building performance-first web products, design systems, and enterprise user experiences.";
+const APP_DESCRIPTION = "Full-stack developer with AWS and AI expertise, building modern web products and cloud-native frontend experiences.";
 import { Inter } from "next/font/google";
 import "./globals.css";
 

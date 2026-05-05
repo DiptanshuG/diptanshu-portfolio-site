@@ -158,7 +158,7 @@ const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
       link: "http://agent360.io/",
       technologies: "React, Next.js, SaaS",
       description:
-        "Delivered a polished customer-facing platform for agent workflows and real-time service management.",
+        "Delivered a polished customer-facing platform for agent workflows, real-time service management, and AI-ready automation.",
     },
     {
       image: "https://image.thum.io/get/jpeg/buy.ca",
@@ -174,7 +174,7 @@ const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
       link: "https://wordline.zerra.in/",
       technologies: "React, TypeScript, PWA",
       description:
-        "Developed a merchant portal with secure payment workflows and progressive web app capabilities.",
+        "Developed a merchant portal with secure payment workflows, progressive web app capabilities, and cloud-friendly commerce flows.",
     },
     {
       image: "https://image.thum.io/get/jpeg/mestokart.com",
@@ -225,10 +225,10 @@ const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
             Selected work
           </p>
           <h2 className="text-4xl md:text-5xl font-extrabold text-white">
-            Projects that demonstrate frontend leadership.
+            Projects demonstrating full-stack, cloud, and AI product delivery.
           </h2>
           <p className="mt-4 text-white/70 max-w-3xl mx-auto text-base md:text-lg">
-            A curated showcase of responsive, performance-minded web experiences built for marketplaces, SaaS, product platforms, and blockchain interfaces.
+            A curated showcase of responsive, AWS-ready, and AI-aware web experiences built for marketplaces, SaaS, product platforms, and blockchain interfaces.
           </p>
         </div>
 

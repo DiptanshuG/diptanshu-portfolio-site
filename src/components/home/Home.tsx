@@ -19,18 +19,18 @@ const Home: React.FC = () => {
                 <div className="section-shell w-full">
                     <div className="glass-surface rounded-[2rem] px-6 md:px-10 py-10 md:py-14 flex flex-col gap-10">
                         <div className="flex flex-wrap items-center gap-3 fade-in">
-                            <span className="pill">Senior Frontend Engineer</span>
+                            <span className="pill">Full-stack · AWS · AI-enabled workflows</span>
                             <span className="text-sm text-white/70">
-                                React • Next.js • TypeScript • Web Performance
+                                React • Next.js • TypeScript • Cloud-native experiences
                             </span>
                         </div>
 
                         <div className="flex flex-col gap-4 md:gap-5 fade-in">
                             <p className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">
-                                Building high-performance interfaces that move products forward.
+                                Building full-stack products with AWS and AI.
                             </p>
                             <p className="text-lg md:text-2xl text-white/75 max-w-3xl">
-                                I help teams ship polished SaaS and marketplace experiences with modern frontend architecture, design system discipline, and measurable product outcomes.
+                                I help teams ship polished SaaS and marketplace experiences with modern frontend architecture, cloud deployment, and intelligent interaction design.
                             </p>
                         </div>
 
