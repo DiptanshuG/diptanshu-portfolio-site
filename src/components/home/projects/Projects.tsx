@@ -16,6 +16,10 @@ import blockseblock from "~/images/blockseblock.png";
 import dao from "~/images/Dao.jpeg";
 import battleChan from "~/images/battlechan.jpeg";
 import pevnost from "~/images/pevnostclient.jpeg";
+import agent360 from "~/images/agent360.png";
+import buyca from "~/images/buyca.png";
+import mestokart from "~/images/mestokart.png";
+import mestokartsellerdashboard from "~/images/mestokartsellerdashboard.png";
 
 interface ProjectsProps {
   sectionRef: React.RefObject<HTMLDivElement | null>;
@@ -153,7 +157,7 @@ const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
         "Pevnost Corporation's website showcases their expertise in providing technical, accounting, and HR services. Built with React.js and Bootstrap, the site offers a sleek and professional platform for marketing their business.",
     },
     {
-      image: "https://image.thum.io/get/jpeg/agent360.io",
+      image: agent360,
       title: "Agent360 Platform",
       link: "http://agent360.io/",
       technologies: "React, Next.js, SaaS",
@@ -161,7 +165,7 @@ const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
         "Delivered a polished customer-facing platform for agent workflows, real-time service management, and AI-ready automation.",
     },
     {
-      image: "https://image.thum.io/get/jpeg/buy.ca",
+      image: buyca,
       title: "Buy.ca Ecommerce Experience",
       link: "http://buy.ca/",
       technologies: "React, Next.js, Tailwind",
@@ -177,7 +181,7 @@ const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
         "Developed a merchant portal with secure payment workflows, progressive web app capabilities, and cloud-friendly commerce flows.",
     },
     {
-      image: "https://image.thum.io/get/jpeg/mestokart.com",
+      image: mestokart,
       title: "MestoKart Marketplace",
       link: "http://mestokart.com/",
       technologies: "React, Bootstrap, Marketplace UX",
@@ -185,7 +189,7 @@ const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
         "Implemented buyer and seller web experiences for an ecommerce marketplace with robust listing and order flows.",
     },
     {
-      image: "https://image.thum.io/get/jpeg/seller.mestokart.com",
+      image: mestokartsellerdashboard,
       title: "MestoKart Seller Portal",
       link: "http://seller.mestokart.com/",
       technologies: "React, TypeScript, Admin UX",
