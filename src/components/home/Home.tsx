@@ -20,35 +20,35 @@ const Home: React.FC = () => {
                     <div className="glass-surface rounded-[2rem] px-6 md:px-10 py-10 md:py-14 flex flex-col gap-10">
                         <div className="flex flex-wrap items-center gap-3 fade-in">
                             <span className="pill">Full-stack · AWS · AI-enabled workflows</span>
-                            <span className="text-sm text-white/70">
+                            <span className="text-sm text-theme-muted">
                                 React • Next.js • TypeScript • Cloud-native experiences
                             </span>
                         </div>
 
                         <div className="flex flex-col gap-4 md:gap-5 fade-in">
-                            <p className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">
+                            <p className="text-4xl md:text-6xl font-extrabold tracking-tight text-theme">
                                 Building full-stack products with AWS and AI.
                             </p>
-                            <p className="text-lg md:text-2xl text-white/75 max-w-3xl">
+                            <p className="text-lg md:text-2xl text-theme-muted max-w-3xl">
                                 I help teams ship polished SaaS and marketplace experiences with modern frontend architecture, cloud deployment, and intelligent interaction design.
                             </p>
                         </div>
 
                         <div className="grid gap-4 md:grid-cols-3 fade-in">
-                            <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
-                                <p className="text-xs uppercase tracking-[0.24em] text-white/50">Experience</p>
-                                <p className="mt-3 text-3xl font-bold text-white">4+ years</p>
-                                <p className="text-sm text-white/60 mt-1">Developing customer-facing digital products.</p>
+                            <div className="rounded-3xl border border-theme bg-[rgba(var(--foreground-rgb),0.06)] p-5">
+                                <p className="text-xs uppercase tracking-[0.24em] text-theme-muted">Experience</p>
+                                <p className="mt-3 text-3xl font-bold text-theme">4+ years</p>
+                                <p className="text-sm text-theme-muted mt-1">Developing customer-facing digital products.</p>
                             </div>
-                            <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
-                                <p className="text-xs uppercase tracking-[0.24em] text-white/50">Impact</p>
-                                <p className="mt-3 text-3xl font-bold text-white">50+</p>
-                                <p className="text-sm text-white/60 mt-1">UI screens shipped for enterprise and consumer apps.</p>
+                            <div className="rounded-3xl border border-theme bg-[rgba(var(--foreground-rgb),0.06)] p-5">
+                                <p className="text-xs uppercase tracking-[0.24em] text-theme-muted">Impact</p>
+                                <p className="mt-3 text-3xl font-bold text-theme">50+</p>
+                                <p className="text-sm text-theme-muted mt-1">UI screens shipped for enterprise and consumer apps.</p>
                             </div>
-                            <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
-                                <p className="text-xs uppercase tracking-[0.24em] text-white/50">Focus</p>
-                                <p className="mt-3 text-3xl font-bold text-white">Performance</p>
-                                <p className="text-sm text-white/60 mt-1">Fast, resilient, accessible frontend journeys.</p>
+                            <div className="rounded-3xl border border-theme bg-[rgba(var(--foreground-rgb),0.06)] p-5">
+                                <p className="text-xs uppercase tracking-[0.24em] text-theme-muted">Focus</p>
+                                <p className="mt-3 text-3xl font-bold text-theme">Performance</p>
+                                <p className="text-sm text-theme-muted mt-1">Fast, resilient, accessible frontend journeys.</p>
                             </div>
                         </div>
 
@@ -59,13 +59,13 @@ const Home: React.FC = () => {
                             >
                                 Explore featured work
                             </button>
-                            <div className="flex items-center gap-4 text-white/80">
-                                <span className="h-12 w-12 rounded-full bg-white/10 grid place-items-center text-lg font-semibold">
+                            <div className="flex items-center gap-4 text-[rgba(var(--foreground-rgb),0.8)]">
+                                <span className="h-12 w-12 rounded-full bg-[rgba(var(--foreground-rgb),0.08)] grid place-items-center text-lg font-semibold text-theme">
                                     DB
                                 </span>
                                 <div className="flex flex-col">
-                                    <span className="font-semibold text-white">Diptanshu Bhawsar</span>
-                                    <span className="text-sm text-white/70">Design-driven frontend for business growth</span>
+                                    <span className="font-semibold text-theme">Diptanshu Bhawsar</span>
+                                    <span className="text-sm text-theme-muted">Design-driven frontend for business growth</span>
                                 </div>
                             </div>
                         </div>

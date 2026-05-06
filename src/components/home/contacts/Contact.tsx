@@ -4,7 +4,7 @@ import Canvas from "@/components/canvas";
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="relative min-h-screen bg-[rgb(9,4,22)] flex items-center justify-center py-20">
+    <section id="contact" className="relative min-h-screen bg-surface flex items-center justify-center py-20">
       <div className="absolute inset-0 opacity-30">
         <Canvas />
       </div>

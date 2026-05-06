@@ -173,20 +173,20 @@ export default function PaymentComponent() {
 
   return (
     <section className="section-shell w-full fade-in">
-      <div className="glass-surface relative overflow-hidden rounded-2xl border border-white/10 p-6 md:p-8 text-white">
+      <div className="relative overflow-hidden rounded-2xl border border-theme p-6 md:p-8 text-theme bg-[rgba(var(--surface-rgb),0.95)]">
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-purple-500/10 via-indigo-500/5 to-purple-500/10 blur-3xl" />
         <div className="relative z-10 flex flex-col gap-6">
           <div className="flex flex-col gap-2">
-            <p className="text-xs uppercase tracking-[0.2em] text-white/60">
+            <p className="text-xs uppercase tracking-[0.2em] text-theme-muted">
               Support the craft
             </p>
             <div className="flex flex-wrap items-center gap-3">
-              <h3 className="text-2xl md:text-3xl font-semibold">
+              <h3 className="text-2xl md:text-3xl font-semibold text-theme">
                 Enjoying the work?
               </h3>
               <span className="pill text-xs md:text-sm">Razorpay Secure</span>
             </div>
-            <p className="text-white/75 max-w-2xl text-sm md:text-base">
+            <p className="text-theme-muted max-w-2xl text-sm md:text-base">
               Fuel the builds with a quick contribution. Every payment is routed
               through Razorpay with verified checkout for a smooth, safe
               experience.
@@ -194,26 +194,26 @@ export default function PaymentComponent() {
           </div>
 
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-white/80">
-              <div className="rounded-xl border border-white/5 bg-white/5 px-4 py-3">
-                <p className="text-xs uppercase tracking-[0.12em] text-white/60">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-theme-muted">
+              <div className="rounded-xl border border-theme bg-[rgba(var(--foreground-rgb),0.06)] px-4 py-3">
+                <p className="text-xs uppercase tracking-[0.12em] text-theme-muted">
                   Latency
                 </p>
-                <p className="text-base font-semibold text-white">Fast, inline</p>
+                <p className="text-base font-semibold text-theme">Fast, inline</p>
               </div>
-              <div className="rounded-xl border border-white/5 bg-white/5 px-4 py-3">
-                <p className="text-xs uppercase tracking-[0.12em] text-white/60">
+              <div className="rounded-xl border border-theme bg-[rgba(var(--foreground-rgb),0.06)] px-4 py-3">
+                <p className="text-xs uppercase tracking-[0.12em] text-theme-muted">
                   Security
                 </p>
-                <p className="text-base font-semibold text-white">
+                <p className="text-base font-semibold text-theme">
                   PCI-compliant
                 </p>
               </div>
-              <div className="rounded-xl border border-white/5 bg-white/5 px-4 py-3">
-                <p className="text-xs uppercase tracking-[0.12em] text-white/60">
+              <div className="rounded-xl border border-theme bg-[rgba(var(--foreground-rgb),0.06)] px-4 py-3">
+                <p className="text-xs uppercase tracking-[0.12em] text-theme-muted">
                   Status
                 </p>
-                <p className="text-base font-semibold text-white">Live checkout</p>
+                <p className="text-base font-semibold text-theme">Live checkout</p>
               </div>
             </div>
 

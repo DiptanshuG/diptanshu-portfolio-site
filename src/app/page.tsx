@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Home from "@/components/home/Home";
 import Projects from "@/components/home/projects/Projects";
 import About from "@/components/home/about/About";
@@ -14,12 +14,23 @@ const MainContent = () => {
   const [theme, setTheme] = useState("light");
   const { sectionRef } = useScrollContext();
 
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    setTheme(savedTheme ?? preferredTheme);
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"));
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[rgb(var(--background-rgb))] text-white">
+    <div className="min-h-screen overflow-x-hidden">
       <Header theme={theme} toggleTheme={toggleTheme} />
       <main className="flex flex-col gap-16 md:gap-24">
         <Home />

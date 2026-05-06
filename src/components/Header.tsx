@@ -9,30 +9,36 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
   return (
-    <header className="fixed z-30 w-full top-0 left-0 right-0 border-b border-white/10 backdrop-blur-xl bg-black/30">
+    <header
+      className="fixed z-30 w-full top-0 left-0 right-0 border-b backdrop-blur-xl"
+      style={{
+        background: "rgba(var(--surface-rgb), 0.85)",
+        borderColor: "rgba(var(--border-rgb), 0.16)",
+      }}
+    >
       <div className="mx-auto section-shell">
         <div className="flex flex-wrap items-center justify-between gap-4 py-4">
           <div className="flex items-center gap-4">
-            <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white shadow-sm shadow-black/20">
+            <div className="rounded-2xl border border-theme bg-[rgba(var(--foreground-rgb),0.06)] px-4 py-2 text-sm font-semibold text-theme shadow-sm shadow-[rgba(var(--shadow-rgb),0.16)]">
               DB
             </div>
             <div>
-              <p className="text-base font-semibold text-white">Diptanshu Bhawsar</p>
-              <p className="text-xs text-white/60">Full-stack AWS & AI Product Engineer</p>
+              <p className="text-base font-semibold text-theme">Diptanshu Bhawsar</p>
+              <p className="text-xs text-[rgba(var(--foreground-rgb),0.64)]">Full-stack AWS & AI Product Engineer</p>
             </div>
           </div>
 
-          <nav className="hidden md:flex items-center gap-6 text-sm text-white/80">
-            <a className="transition hover:text-white" href="#work">
+          <nav className="hidden md:flex items-center gap-6 text-sm text-[rgba(var(--foreground-rgb),0.72)]">
+            <a className="transition hover:text-theme" href="#work">
               Work
             </a>
-            <a className="transition hover:text-white" href="#about">
+            <a className="transition hover:text-theme" href="#about">
               About
             </a>
-            <a className="transition hover:text-white" href="#skills">
+            <a className="transition hover:text-theme" href="#skills">
               Skills
             </a>
-            <a className="transition hover:text-white" href="#contact">
+            <a className="transition hover:text-theme" href="#contact">
               Contact
             </a>
           </nav>
@@ -41,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
             <span className="pill text-sm">Open to opportunities</span>
             <button
               onClick={toggleTheme}
-              className="rounded-full p-3 hover:bg-white/10 transition-colors duration-200 text-white"
+              className="rounded-full p-3 hover:bg-[rgba(var(--foreground-rgb),0.08)] transition-colors duration-200 text-theme"
               aria-label="Toggle theme"
             >
               {theme === "light" ? <FaMoon size={20} /> : <FaSun size={20} />}

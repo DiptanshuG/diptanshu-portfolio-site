@@ -52,28 +52,28 @@ const skillSections = [
 
 const Skills: React.FC = () => {
   return (
-    <section id="skills" className="skills py-16 bg-[rgb(9,4,22)]">
+    <section id="skills" className="skills py-16 bg-surface">
       <div className="section-shell">
         <div className="text-center mb-10">
-          <p className="text-sm uppercase tracking-[0.3em] text-purple-300/80 mb-2">
+          <p className="text-sm uppercase tracking-[0.3em] text-[rgba(var(--accent-rgb),0.9)] mb-2">
             Core capabilities
           </p>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-theme">
             A strong stack for modern product delivery.
           </h2>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-3">
           {skillSections.map((section) => (
-            <div key={section.title} className="rounded-3xl border border-white/10 bg-white/5 p-6">
-              <h3 className="text-xl font-semibold text-white mb-5">{section.title}</h3>
+            <div key={section.title} className="rounded-3xl border border-theme bg-[rgba(var(--foreground-rgb),0.06)] p-6">
+              <h3 className="text-xl font-semibold text-theme mb-5">{section.title}</h3>
               <div className="grid gap-4">
                 {section.items.map((tech) => (
                   <div key={tech.title} className="flex items-center gap-4">
-                    <div className="h-12 w-12 rounded-3xl bg-white/5 grid place-items-center">
+                    <div className="h-12 w-12 rounded-3xl bg-[rgba(var(--foreground-rgb),0.06)] grid place-items-center">
                       <Image src={tech.icon} alt={tech.title} width={32} height={32} />
                     </div>
-                    <p className="text-white/80">{tech.title}</p>
+                    <p className="text-theme-muted">{tech.title}</p>
                   </div>
                 ))}
               </div>

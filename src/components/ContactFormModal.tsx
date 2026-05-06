@@ -39,43 +39,37 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, onClose }) 
     >
       <div className="absolute inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
       <div
-        className={`bg-white text-black rounded-lg overflow-hidden shadow-xl transform transition-transform ${isOpen ? 'scale-100' : 'scale-75'
-          } w-11/12 max-w-md p-6`}
+        className={`rounded-lg overflow-hidden shadow-xl transform transition-transform ${isOpen ? 'scale-100' : 'scale-75'
+          } w-11/12 max-w-md p-6 bg-[rgba(var(--surface-rgb),0.98)] border border-theme text-theme`}
       >
         <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
         <form ref={form} onSubmit={sendEmail}>
           <div className="mb-4">
-            <label className="block text-sm font-bold mb-2" htmlFor="name">
-              Name
-            </label>
+            <label className="block text-sm font-bold mb-2 text-theme">Name</label>
             <input
               type="text"
               name="user_name"
               id="name"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+              className="w-full px-3 py-2 border border-theme rounded-lg bg-[rgba(var(--foreground-rgb),0.04)] text-theme focus:outline-none focus:ring focus:border-[rgba(var(--accent-rgb),0.4)]"
               required
             />
           </div>
           <div className="mb-4">
-            <label className="block text-sm font-bold mb-2" htmlFor="email">
-              Email
-            </label>
+            <label className="block text-sm font-bold mb-2 text-theme">Email</label>
             <input
               type="email"
               name="user_email"
               id="email"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+              className="w-full px-3 py-2 border border-theme rounded-lg bg-[rgba(var(--foreground-rgb),0.04)] text-theme focus:outline-none focus:ring focus:border-[rgba(var(--accent-rgb),0.4)]"
               required
             />
           </div>
           <div className="mb-4">
-            <label className="block text-sm font-bold mb-2" htmlFor="message">
-              Message
-            </label>
+            <label className="block text-sm font-bold mb-2 text-theme">Message</label>
             <textarea
               name="message"
               id="message"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+              className="w-full px-3 py-2 border border-theme rounded-lg bg-[rgba(var(--foreground-rgb),0.04)] text-theme focus:outline-none focus:ring focus:border-[rgba(var(--accent-rgb),0.4)]"
               required
             ></textarea>
           </div>

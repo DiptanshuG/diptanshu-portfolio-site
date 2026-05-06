@@ -15,9 +15,9 @@ const About: React.FC = () => {
   };
 
   return (
-    <section className="bg-[rgb(9,4,22)] text-white py-16 md:py-24">
+    <section className="bg-surface text-theme py-16 md:py-24">
       <div className="section-shell">
-        <h2 className="text-4xl md:text-5xl mb-12 md:mb-16 font-extrabold text-white text-center">
+        <h2 className="text-4xl md:text-5xl mb-12 md:mb-16 font-extrabold text-theme text-center">
           About Me
         </h2>
 
@@ -51,17 +51,17 @@ const About: React.FC = () => {
             </div>
 
             <div className="grid gap-4 md:grid-cols-2">
-              <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
-                <p className="text-sm uppercase tracking-[0.2em] text-white/60">Focus areas</p>
-                <ul className="mt-3 space-y-2 text-white/80 text-sm">
+              <div className="rounded-3xl border border-theme bg-[rgba(var(--foreground-rgb),0.06)] p-5">
+                <p className="text-sm uppercase tracking-[0.2em] text-theme-muted">Focus areas</p>
+                <ul className="mt-3 space-y-2 text-[rgba(var(--foreground-rgb),0.8)] text-sm">
                   <li>React & Next.js applications</li>
                   <li>AWS-backed architecture and deployment</li>
                   <li>AI-assisted product interactions</li>
                 </ul>
               </div>
-              <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
-                <p className="text-sm uppercase tracking-[0.2em] text-white/60">What I deliver</p>
-                <ul className="mt-3 space-y-2 text-white/80 text-sm">
+              <div className="rounded-3xl border border-theme bg-[rgba(var(--foreground-rgb),0.06)] p-5">
+                <p className="text-sm uppercase tracking-[0.2em] text-theme-muted">What I deliver</p>
+                <ul className="mt-3 space-y-2 text-[rgba(var(--foreground-rgb),0.8)] text-sm">
                   <li>Design system and component libraries</li>
                   <li>Accessible and scalable interfaces</li>
                   <li>Cloud-ready, performance-first web products</li>

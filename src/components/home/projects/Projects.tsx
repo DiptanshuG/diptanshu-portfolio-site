@@ -222,16 +222,16 @@ const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
   ];
 
   return (
-    <section id="work" className="showcase w-screen bg-[rgb(9,4,22)]">
+    <section id="work" className="showcase w-screen bg-surface">
       <div className="section-shell mx-auto px-4 py-16" ref={sectionRef}>
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <p className="text-sm uppercase tracking-[0.3em] text-purple-300/80 mb-4">
+          <p className="text-sm uppercase tracking-[0.3em] text-[rgba(var(--accent-rgb),0.9)] mb-4">
             Selected work
           </p>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-theme">
             Projects demonstrating full-stack, cloud, and AI product delivery.
           </h2>
-          <p className="mt-4 text-white/70 max-w-3xl mx-auto text-base md:text-lg">
+          <p className="mt-4 text-theme-muted max-w-3xl mx-auto text-base md:text-lg">
             A curated showcase of responsive, AWS-ready, and AI-aware web experiences built for marketplaces, SaaS, product platforms, and blockchain interfaces.
           </p>
         </div>

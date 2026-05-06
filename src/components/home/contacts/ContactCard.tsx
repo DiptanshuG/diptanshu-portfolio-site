@@ -19,12 +19,12 @@ const socialMediaLinks = [
 
 const ContactCard: React.FC = () => {
   return (
-    <div className="h-[370px] w-full max-w-md mx-auto bg-[#242424] border border-transparent rounded-lg transition-all duration-1000 ease-in-out p-4">
+    <div className="h-[370px] w-full max-w-md mx-auto bg-[rgba(var(--surface-rgb),0.95)] border border-theme rounded-lg transition-all duration-1000 ease-in-out p-4">
       <div>
-        <h2 className="text-4xl my-6 font-bold mb-8 text-white text-center font-extrabold">
+        <h2 className="text-4xl my-6 font-bold mb-8 text-theme text-center font-extrabold">
           Contact Me
         </h2>
-        <div className="flex flex-col items-center justify-center p-4">
+        <div className="flex flex-col items-center justify-center p-4 text-theme-muted">
           <a className="contactInfo break-all truncate" href="mailto:diptanshubhawsar50@gmail.com">
             <AiOutlineMail className="inline-block mr-2" />
             diptanshubhawsar50@gmail.com
