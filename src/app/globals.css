@@ -10,7 +10,9 @@
   --card-rgb: 15, 23, 42;
   --surface-rgb: 10, 12, 22;
   --border-rgb: 255, 255, 255;
+  --shadow-rgb: 0, 0, 0;
   --accent-rgb: 124, 58, 237;
+  --muted-opacity: 0.72;
   --accent: #7c3aed;
   --accent-strong: #a855f7;
 }
@@ -21,7 +23,9 @@
   --card-rgb: 255, 255, 255;
   --surface-rgb: 244, 245, 247;
   --border-rgb: 148, 163, 184;
+  --shadow-rgb: 100, 116, 139;
   --accent-rgb: 124, 58, 237;
+  --muted-opacity: 0.58;
   --accent: #7c3aed;
   --accent-strong: #6d28d9;
 }
@@ -47,7 +51,7 @@ body {
 }
 
 .text-theme-muted {
-  color: rgba(var(--foreground-rgb), 0.72);
+  color: rgba(var(--foreground-rgb), var(--muted-opacity));
 }
 
 .bg-surface {
@@ -77,6 +81,12 @@ body {
   color: rgb(var(--foreground-rgb));
   font-weight: 600;
   border: 1px solid rgba(var(--accent-rgb), 0.32);
+}
+
+[data-theme="light"] .pill {
+  background: rgba(var(--accent-rgb), 0.22);
+  color: rgb(var(--accent-rgb));
+  border: 1px solid rgba(var(--accent-rgb), 0.42);
 }
 
 @layer utilities {
@@ -133,13 +143,13 @@ body {
 .glass-surface {
   background: linear-gradient(
       145deg,
-      rgba(255, 255, 255, 0.05),
-      rgba(255, 255, 255, 0.02)
+      rgba(var(--foreground-rgb), 0.08),
+      rgba(var(--foreground-rgb), 0.04)
     ),
-    rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(12px);
+    rgba(var(--surface-rgb), 0.88);
+  border: 1px solid rgba(var(--border-rgb), 0.12);
+  box-shadow: 0 10px 40px rgba(var(--shadow-rgb), 0.14);
+  backdrop-filter: blur(18px);
 }
 
 .pill {

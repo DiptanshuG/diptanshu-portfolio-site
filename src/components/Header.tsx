@@ -24,11 +24,11 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
             </div>
             <div>
               <p className="text-base font-semibold text-theme">Diptanshu Bhawsar</p>
-              <p className="text-xs text-[rgba(var(--foreground-rgb),0.64)]">Full-stack AWS & AI Product Engineer</p>
+              <p className="text-xs text-theme-muted">Full-stack AWS & AI Product Engineer</p>
             </div>
           </div>
 
-          <nav className="hidden md:flex items-center gap-6 text-sm text-[rgba(var(--foreground-rgb),0.72)]">
+          <nav className="hidden md:flex items-center gap-6 text-sm text-theme-muted">
             <a className="transition hover:text-theme" href="#work">
               Work
             </a>

@@ -12,7 +12,7 @@ const Home: React.FC = () => {
         <section id="hero" className="relative overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <Canvas />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/40 to-black/90" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[rgba(var(--background-rgb),0.65)] via-[rgba(var(--background-rgb),0.4)] to-[rgba(var(--background-rgb),0.95)]" />
             </div>
 
             <div className="min-h-screen pt-28 relative z-10 flex items-center">

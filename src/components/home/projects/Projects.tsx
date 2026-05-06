@@ -10,6 +10,7 @@ import kitchenIqLanding from "~/images/kitcheniq.png";
 import portfolio from "~/images/portfolio.png";
 import pos from "~/images/pos.png";
 import rentyourdress from "~/images/rentyourdress.png";
+import wordlineEduTechPlatform from "~/images/wordlineedutechplatform.png";
 import todo from "~/images/todos.jpeg";
 import uniqart from "~/images/uniqart.png";
 import blockseblock from "~/images/blockseblock.png";
@@ -205,7 +206,7 @@ const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
         "Built grocery ecommerce interfaces aligned with ONDC marketplace guidelines for a modern retail experience.",
     },
     {
-      image: portfolio,
+      image: wordlineEduTechPlatform,
       title: "EduTech Learning Platform",
       technologies: "React, Node.js, Tailwind",
       description:
