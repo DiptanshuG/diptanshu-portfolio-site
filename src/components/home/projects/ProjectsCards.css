@@ -109,6 +109,14 @@
   transform: translateX(4px);
 }
 
+[data-theme="light"] .project-link {
+  color: #6d28d9;
+}
+
+[data-theme="light"] .project-card:hover .project-link {
+  color: #4c1d95;
+}
+
 .project-card:hover .project-info {
   transform: translateY(0%);
   opacity: 1;
