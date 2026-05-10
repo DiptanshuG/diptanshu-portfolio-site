@@ -1,12 +1,12 @@
 .skill {
     position: relative;
   }
-  
+
   .tech-icon {
     position: relative;
     transition: transform 0.3s;
   }
-  
+
   .tech-title {
     opacity: 0;
     position: absolute;
@@ -19,9 +19,70 @@
     border-radius: 5px;
     transition: opacity 0.3s, bottom 0.3s;
   }
-  
+
   .tech-icon:hover .tech-title {
     opacity: 1;
     bottom: 0;
   }
+
+/* ─── AI & GenAI section — light mode overrides ─────────────────────────── */
+
+/* Category header labels */
+[data-theme="light"] .ai-cat-header[data-cat="llms"],
+[data-theme="light"] .ai-cat-header[data-cat="frameworks"] {
+  color: #5b21b6 !important; /* purple-800 */
+}
+[data-theme="light"] .ai-cat-header[data-cat="patterns"] {
+  color: #065f46 !important; /* emerald-900 */
+}
+[data-theme="light"] .ai-cat-header[data-cat="infrastructure"] {
+  color: #9a3412 !important; /* orange-800 */
+}
+
+/* Item card backgrounds */
+[data-theme="light"] .ai-item-card[data-cat="llms"],
+[data-theme="light"] .ai-item-card[data-cat="frameworks"] {
+  background: rgba(124, 58, 237, 0.09) !important;
+  border-color: rgba(124, 58, 237, 0.3) !important;
+}
+[data-theme="light"] .ai-item-card[data-cat="patterns"] {
+  background: rgba(5, 150, 105, 0.09) !important;
+  border-color: rgba(5, 150, 105, 0.3) !important;
+}
+[data-theme="light"] .ai-item-card[data-cat="infrastructure"] {
+  background: rgba(234, 88, 12, 0.09) !important;
+  border-color: rgba(234, 88, 12, 0.3) !important;
+}
+
+/* Skill name text — dark enough to read on light bg */
+[data-theme="light"] .ai-item-name[data-cat="llms"],
+[data-theme="light"] .ai-item-name[data-cat="frameworks"] {
+  color: #4c1d95 !important; /* purple-900 */
+}
+[data-theme="light"] .ai-item-name[data-cat="patterns"] {
+  color: #064e3b !important; /* emerald-900 */
+}
+[data-theme="light"] .ai-item-name[data-cat="infrastructure"] {
+  color: #7c2d12 !important; /* orange-900 */
+}
+
+/* Status badges */
+[data-theme="light"] .ai-status-learning {
+  background: rgba(217, 119, 6, 0.13) !important;
+  border-color: rgba(217, 119, 6, 0.42) !important;
+  color: #92400e !important; /* amber-800 */
+}
+[data-theme="light"] .ai-status-exploring {
+  background: rgba(2, 132, 199, 0.11) !important;
+  border-color: rgba(2, 132, 199, 0.38) !important;
+  color: #075985 !important; /* sky-800 */
+}
+
+/* Legend dot colours follow the badge text colour */
+[data-theme="light"] .ai-status-learning .ai-legend-dot {
+  background: #92400e !important;
+}
+[data-theme="light"] .ai-status-exploring .ai-legend-dot {
+  background: #075985 !important;
+}
   

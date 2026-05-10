@@ -9,6 +9,7 @@ import Header from "@/components/Header";
 import Contact from "@/components/home/contacts/Contact";
 import Footer from "@/components/Footer/Footer";
 import { ScrollProvider, useScrollContext } from "./context/ScrollContext";
+import CurrentlyBuilding from "@/components/home/CurrentlyBuilding";
 
 const MainContent = () => {
   const [theme, setTheme] = useState("light");
@@ -37,6 +38,7 @@ const MainContent = () => {
         <Projects sectionRef={sectionRef} />
         <About />
         <Skills />
+        <CurrentlyBuilding />
         <div style={{ position: "relative" }}>
           <Contact />
         </div>

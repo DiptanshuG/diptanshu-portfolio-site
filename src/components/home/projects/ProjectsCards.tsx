@@ -13,11 +13,13 @@ interface Project {
 interface ProjectsCardsProps {
   project: Project;
   className?: string;
+  aiTag?: boolean;
 }
 
 const ProjectsCards: React.FC<ProjectsCardsProps> = ({
   project,
   className,
+  aiTag,
 }) => {
   const [imgError, setImgError] = useState(false);
   const isRemoteImage = typeof project.image === "string";
@@ -53,6 +55,27 @@ const ProjectsCards: React.FC<ProjectsCardsProps> = ({
         )}
       </div>
       <div className="project-overlay" />
+      {aiTag && (
+        <span
+          style={{
+            position: "absolute",
+            top: "0.75rem",
+            right: "0.75rem",
+            zIndex: 10,
+            background: "rgba(124,58,237,0.82)",
+            border: "1px solid rgba(167,139,250,0.6)",
+            color: "#e9d5ff",
+            fontSize: "0.65rem",
+            fontWeight: 700,
+            letterSpacing: "0.12em",
+            padding: "0.2rem 0.55rem",
+            borderRadius: "999px",
+            backdropFilter: "blur(6px)",
+          }}
+        >
+          AI
+        </span>
+      )}
       <div className="project-info">
         <div className="project-tag">{project.technologies}</div>
         <h3 className="project-title">{project.title}</h3>

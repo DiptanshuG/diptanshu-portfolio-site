@@ -164,6 +164,7 @@ const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
       technologies: "React, Next.js, SaaS",
       description:
         "Delivered a polished customer-facing platform for agent workflows, real-time service management, and AI-ready automation.",
+      aiTag: true,
     },
     {
       image: buyca,
@@ -242,6 +243,7 @@ const Projects: React.FC<ProjectsProps> = ({ sectionRef }) => {
             <ProjectsCards
               key={index}
               project={project}
+              aiTag={(project as { aiTag?: boolean }).aiTag}
               className={index % 3 === 1 ? "mt-8" : ""}
             />
           ))}

@@ -4,6 +4,7 @@ import React from "react";
 import ScrollIcon from "@/components/scrollIcon/ScrollIcon";
 import Canvas from "@/components/canvas";
 import { useScrollContext } from "@/app/context/ScrollContext";
+import TerminalBlock from "@/components/TerminalBlock";
 
 const Home: React.FC = () => {
     const { scrollToSection } = useScrollContext();
@@ -50,6 +51,11 @@ const Home: React.FC = () => {
                                 <p className="mt-3 text-3xl font-bold text-theme">Performance</p>
                                 <p className="text-sm text-theme-muted mt-1">Fast, resilient, accessible frontend journeys.</p>
                             </div>
+                        </div>
+
+                        {/* Terminal block */}
+                        <div className="fade-in">
+                            <TerminalBlock />
                         </div>
 
                         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between fade-in">
